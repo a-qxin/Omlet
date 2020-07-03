@@ -1,3 +1,3 @@
-# react-signup-verification
-React - Email Sign Up with Verification, Authentication & Forgot Password
+# react-login/signup-verification
+React - Email Registration with Verification, Authentication, and Forgot Password
 
