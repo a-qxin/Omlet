@@ -1,3 +1,8 @@
-# react-login/signup-verification
-React - Email Registration with Verification, Authentication, and Forgot Password
+# Omlet
 
+Omlet is a study app built by students for students.
+
+--
+
+Current features:
+React - Email Registration with Signup Verification, Authentication, Forgot Password
