@@ -18,7 +18,7 @@ function Home() {
 
     }; */
 
-    
+    /// Code returned when user reaches home page
     return (
         <div>
             <div>
