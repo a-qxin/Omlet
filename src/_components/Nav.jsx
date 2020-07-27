@@ -38,17 +38,31 @@ function Nav() {
         <div>
             <nav className="navbar navbar-expand navbar-light bg-light">
                 <div class="container">
-                    <Row>
-                    <Col><NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink></Col>
-                    <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col>
-                    </Row>
-                    <Form inline class="col">
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
-                    <Row><NavLink exact to="/" className="nav-item nav-link" >Home</NavLink></Row>
-                    <Row><NavLink to="/profile" className="nav-item nav-link" >Profile</NavLink></Row>
-                    <Row><a onClick={accountService.logout} className="nav-item nav-link" >Logout</a></Row>
+                    <Col>
+                        <Row>
+                            <Col sm={1}> 
+                                <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
+                            </Col>
+
+                            <Col sm={1}/>
+                            <Col sm={5}>
+                                <Form inline class="col" className='ml-sm-5 pt-3'>
+                                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                                    <Button variant="outline-success">Search</Button>
+                                </Form>
+                            </Col>
+
+                            <Col sm={3}/>
+                            <Col>
+                                <NavLink to="/profile" className="nav-item nav-link pt-4" >Profile</NavLink>
+                            </Col>
+                        </Row>
+                        <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
+                        
+                        <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
+                    </Col>                    
+                    {/* <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col> */}
+                        
                     {user.role === Role.Admin &&
                         <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
                     }
