@@ -5,12 +5,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 function Home() {
     const user = accountService.userValue;
     
-    /*const message = {
-        position: 'relative',
-        top: '-350px',
-        right: '-210px', 
-
-    }; */
+    const welcome = {
+        fontSize: '2vw',
+      ///  paddingLeft: '50px',
+        /// paddingBottom: '50px'
+        }; 
     /* const logo = {
         position: 'relative',
         right: '-1500px',
@@ -21,13 +20,13 @@ function Home() {
     /// Code returned when user reaches home page
     return (
         <div>
-            <div>
             <Container>
-              <Row className="justify-content-md-center">
-              <Col>Welcome back {user.firstName}!</Col>
+              <Row>
+              <Col style={welcome}>
+                Welcome back <b>{user.firstName}</b>  
+              </Col>
               </Row>
             </Container>
-            </div>
         </div>
 
     );
