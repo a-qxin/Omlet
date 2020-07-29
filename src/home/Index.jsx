@@ -6,10 +6,13 @@ function Home() {
     const user = accountService.userValue;
     
     const welcome = {
-        fontSize: '1vw',
+      fontSize: '2vw',
       ///  paddingLeft: '50px',
         /// paddingBottom: '50px'
-        }; 
+      }; 
+    const weekly = {
+      fontSize: '20px',
+      };
     const border = {
         border: '1px solid #C4C4C4',
         width: '77vw',
@@ -29,23 +32,30 @@ function Home() {
     /// Code returned when user reaches home page
     return (
         <div>
-             <Container>
-                <Row>
+              <Row>
+                <Col>
+                </Col>
                  <Col style={welcome}>
                     Welcome back <b>{user.firstName}</b>                              
                     <hr style={border} />
                   </Col>
                 </Row>
               <Row>
-              <Col style={welcome}> 
+              <Col></Col>
+              <Row> </Row>
+              <Row>
+              <Col style={weekly}> 
                 Weekly Study Time:   
               </Col>
               </Row>
+              <Col></Col>
+              <Col>
               <a href='/' style={recent}>
                 Recently Studied
                 <hr />
               </a>
-              </Container>
+              </Col>
+              </Row>
         </div>
 
     );
