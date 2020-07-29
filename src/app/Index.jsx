@@ -21,7 +21,7 @@ function App() {
     return (
         <div className={'app-container' + (user && ' bg-light')}>
             <Nav />
-            <Searchbar />
+            {/* <Searchbar/> */}
             <Alert />
             <Switch>
                 <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />

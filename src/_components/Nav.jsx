@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Route } from 'react-router-dom';
+import { Searchbar } from '@/_components';
+
 
 import { Role } from '@/_helpers';
 import { accountService } from '@/_services';
@@ -57,8 +59,11 @@ function Nav() {
                 </Row>
             </nav>    
                         <Col sm={1}/>
+                        
                     <Row>
-                        <Col sm={11}/>
+                        <Col sm={3}/>
+                        <Col sm={4} style={{top:'20px'}}><Searchbar/></Col>
+                        <Col sm={4}/>
                         <Col>
                             <NavLink to="/profile" className="nav-item nav-link pt-4" >Profile</NavLink>
                         </Col>
