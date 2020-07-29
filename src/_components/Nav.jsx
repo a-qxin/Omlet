@@ -14,6 +14,11 @@ import { Form, Button, FormControl } from 'react-bootstrap';
         /// paddingBottom: '50px'
         };
 
+    const welcome = {
+        fontSize: '2vw',
+        top: '50px',
+    }; 
+
     /* const sidebar = {
       flexDirection: 'column',
       justifyContent: 'center',
@@ -36,41 +41,33 @@ function Nav() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand navbar-light bg-light">
-                <Col>
-                    <Row>
-                        <Col sm={1}> 
+            <nav className="navbar navbar-expand vertical-nav">
+                <Row>
+                    <Col>
                             <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
                             {/* <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col> */}
-                        </Col>
-
-                        <Col sm={1}/>
-                        <Col sm={5}>
-                            <Form inline class="col" className='ml-sm-5 pt-3'>
-                                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                <Button variant="outline-success">Search</Button>
-                            </Form>
-                        </Col>
-
-                        <Col sm={4}/>
-                        <Col>
-                            <NavLink to="/profile" className="nav-item nav-link pt-4" >Profile</NavLink>
-                        </Col>
-                    </Row>
-                    <div id="sideLeft" className="col-lg-1">
+                               <div id="sideLeft" className="col-lg-1">
                     <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
                     <NavLink exact to="/" className="nav-item nav-link" >Sets</NavLink>
                     <NavLink exact to="/" className="nav-item nav-link" >Study Plan</NavLink>
                     <NavLink exact to="/" className="nav-item nav-link" >Metrics</NavLink>
                     <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
                     </div>
-                </Col>  
+                    </Col>
+                </Row>
+            </nav>    
+                        <Col sm={1}/>
+                    <Row>
+                        <Col sm={11}/>
+                        <Col>
+                            <NavLink to="/profile" className="nav-item nav-link pt-4" >Profile</NavLink>
+                        </Col>
+                    </Row>    
                                   
                     
                 {user.role === Role.Admin &&
                     <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
                 }
-            </nav>
             <Route path="/admin" component={AdminNav} />
         </div>
     );
