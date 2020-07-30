@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import { Searchbar } from '@/_components';
 
-
 import { Role } from '@/_helpers';
 import { accountService } from '@/_services';
 
@@ -44,30 +43,31 @@ function Nav() {
     return (
         <div>
             <nav className="navbar navbar-expand vertical-nav">
-                <Row>
+                <Row style={{height:"100%", width:"100%"}}>
                     <Col>
-                            <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
-                            {/* <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col> */}
-                               <div id="sideLeft" className="col-lg-1">
-                    <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
-                    <NavLink exact to="/" className="nav-item nav-link" >Sets</NavLink>
-                    <NavLink exact to="/" className="nav-item nav-link" >Study Plan</NavLink>
-                    <NavLink exact to="/" className="nav-item nav-link" >Metrics</NavLink>
-                    <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
+                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
+                        {/* <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col> */}
+                        <div id="sideLeft" className="col-lg-1">
+                        <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" >Sets</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" >Study Plan</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" >Metrics</NavLink>
+                        <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
                     </div>
                     </Col>
                 </Row>
             </nav>    
-                        <Col sm={1}/>
-                        
-                    <Row>
-                        <Col sm={3}/>
-                        <Col sm={4} style={{top:'20px'}}><Searchbar/></Col>
-                        <Col sm={4}/>
-                        <Col>
-                            <NavLink to="/profile" className="nav-item nav-link pt-4" >Profile</NavLink>
-                        </Col>
-                    </Row>    
+            
+            <Col sm={1}/>
+                
+            <Row>
+                <Col sm={3}/>
+                <Col sm={4} style={{top:'20px'}}><Searchbar/></Col>
+                <Col sm={4}/>
+                <Col>
+                    <NavLink to="/profile" className="nav-item nav-link pt-4" >Profile</NavLink>
+                </Col>
+            </Row>    
                                   
                     
                 {user.role === Role.Admin &&
