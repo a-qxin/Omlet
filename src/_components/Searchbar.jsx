@@ -8,7 +8,7 @@ function Searchbar() {
 
     useEffect(() => {
         const subscription = accountService.user.subscribe(x => setUser(x));
-        return subscription.unsubscribe;
+        return accountService.user.unsubscribe;
     }, []);
 
     // only show nav when logged in
