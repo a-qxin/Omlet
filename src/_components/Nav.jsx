@@ -47,13 +47,13 @@ function Nav() {
                     <Col>
                         <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
                         {/* <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col> */}
-                        <div id="sideLeft" className="col-lg-1">
+                        {/* <div id="sideLeft" className="col-lg-1"> */}
                         <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
                         <NavLink exact to="/" className="nav-item nav-link" >Sets</NavLink>
                         <NavLink exact to="/" className="nav-item nav-link" >Study Plan</NavLink>
                         <NavLink exact to="/" className="nav-item nav-link" >Metrics</NavLink>
                         <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
-                    </div>
+                        {/* </div> */}
                     </Col>
                 </Row>
             </nav>    
