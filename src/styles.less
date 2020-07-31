@@ -54,3 +54,14 @@ a { cursor: pointer; }
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
   }
+
+  @media (max-width: 1500px) {
+    html {
+      .element{
+        position:absolute;
+        top: 0; bottom: 430px; left: 280px; right: 0;
+        margin: auto;
+        height: 20px; /*requires explicit height*/
+      }
+    }
+}
