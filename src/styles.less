@@ -6,9 +6,51 @@ a { cursor: pointer; }
     min-height: 650px;
 } 
 
-.admin-nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: #e8e9ea;
-    border-bottom: 1px solid #ccc;
-}
+/// Styling for search bar
+.wrapper {
+    position: fixed;
+    display: flex;
+    min-width: 100px;
+  }
+  
+  .search {
+    height: 25px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    width: 14px;
+  }
+
+  input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+  }
+  
+  .no-outline:focus {
+    outline: none;
+  }
+/*
+.search:hover, .search:focus {
+    border: 1px solid #009688;
+    background-color: white;
+  } */
+
+  ///Styling for navbar
+  .vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
