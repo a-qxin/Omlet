@@ -1,10 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 import { accountService } from '@/_services';
 import { Container, Row, Col } from 'react-bootstrap';
+=======
+
+import { accountService } from '@/_services';
+>>>>>>> master
 
 function Home() {
     const user = accountService.userValue;
     
+<<<<<<< HEAD
     const welcome = {
       fontSize: '2vw',
       ///  paddingLeft: '50px',
@@ -62,3 +68,16 @@ function Home() {
 }
 
 export { Home };
+=======
+    return (
+        <div className="p-4">
+            <div className="container">
+                <h1>Hi {user.firstName}!</h1>
+                <p>You're logged in with React & JWT!!</p>
+            </div>
+        </div>
+    );
+}
+
+export { Home };
+>>>>>>> master
