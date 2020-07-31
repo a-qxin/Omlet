@@ -3,11 +3,7 @@ import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 
 import { Role } from '@/_helpers';
 import { accountService } from '@/_services';
-<<<<<<< HEAD
-import { Nav, PrivateRoute, Alert, Searchbar } from '@/_components';
-=======
 import { Nav, PrivateRoute, Alert } from '@/_components';
->>>>>>> master
 import { Home } from '@/home';
 import { Profile } from '@/profile';
 import { Admin } from '@/admin';
@@ -25,10 +21,6 @@ function App() {
     return (
         <div className={'app-container' + (user && ' bg-light')}>
             <Nav />
-<<<<<<< HEAD
-            {/* <Searchbar/> */}
-=======
->>>>>>> master
             <Alert />
             <Switch>
                 <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
@@ -42,8 +34,4 @@ function App() {
     );
 }
 
-<<<<<<< HEAD
 export { App }; 
-=======
-export { App }; 
->>>>>>> master
