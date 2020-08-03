@@ -13,21 +13,29 @@ function Home() {
     const weekly = {
       fontSize: '20px',
       };
+
     const border = {
         border: '1px solid #C4C4C4',
         width: '77vw',
   
       };
       
-    const recent = {
-      top: '10vw',
-      };
-    /* const logo = {
-        position: 'relative',
-        right: '-1500px',
-        bottom: '470px'
+    const underline1 = {
+        width: '9vw',
+    };
+    
+    const underline2 = {
+        width: '6vw',
+        marginLeft: '0',
+    };
 
-    }; */
+    const height = {
+        height: '100px',
+    };
+
+    const padding = {
+        paddingTop: '4vw',
+    };
 
     /// Code returned when user reaches home page
     return (
@@ -41,20 +49,35 @@ function Home() {
                   </Col>
                 </Row>
               <Row>
-              <Col></Col>
-              <Row> </Row>
+              <Col sm={8} />
               <Row>
-              <Col style={weekly}> 
-                Weekly Study Time:   
-              </Col>
-              </Row>
-              <Col></Col>
-              <Col>
-              <a href='/' style={recent}>
+              <Col > 
+              <a href='/' >
                 Recently Studied
-                <hr />
+                <hr style={underline1}/>
               </a>
               </Col>
+              </Row>
+              <Col />
+              <Col>
+              <a href='/'>
+              <img src="https://img.icons8.com/android/24/000000/plus.png"/>
+               Add Set  
+                <hr style={underline2}/>
+              </a>
+              </Col>
+              </Row>
+              <Row>
+                <Col sm={3} />
+                <Col style={weekly}>
+                Weekly Study Time: "A lot"
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={3}/>
+                <Col style={padding}>
+                Weekly exp growth:
+                </Col>
               </Row>
         </div>
 
