@@ -7,8 +7,7 @@ function Study_Plan() {
     
     const welcome = {
       fontSize: '2vw',
-      ///  paddingLeft: '50px',
-        /// paddingBottom: '50px'
+ 
       }; 
     const weekly = {
       fontSize: '20px',
@@ -22,12 +21,15 @@ function Study_Plan() {
     const recent = {
       top: '10vw',
       };
-    /* const logo = {
-        position: 'relative',
-        right: '-1500px',
-        bottom: '470px'
-
-    }; */
+    
+      const underline1 = {
+        width: '9vw',
+    };
+    
+    const underline2 = {
+        width: '6vw',
+        marginLeft: '0',
+    };
 
     /// Code returned when user reaches home page
     return (
@@ -36,20 +38,27 @@ function Study_Plan() {
                 <Col>
                 </Col>
                  <Col style={welcome}>
-                Study Plan                    
-                <hr style={border} />
+                    Welcome back <b>{user.firstName}</b>                              
+                    <hr style={border} />
                   </Col>
                 </Row>
               <Row>
-              <Col></Col>
-              <Row> </Row>
+              <Col sm={8} />
               <Row>
-              <Col style={weekly}> 
+              <Col > 
+              <a href='/' >
+                Upcoming
+                <hr style={underline1}/>
+              </a>
               </Col>
               </Row>
-              <Col></Col>
+              <Col />
               <Col>
-                 
+              <a href='/'>
+              <img src="https://img.icons8.com/android/24/000000/plus.png"/>
+               New Test
+                <hr style={underline2}/>
+              </a>
               </Col>
               </Row>
         </div>
