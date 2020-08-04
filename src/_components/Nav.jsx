@@ -8,7 +8,7 @@ import { accountService } from '@/_services';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, Button, FormControl } from 'react-bootstrap';
 
-     const omlet = {
+    const omlet = {
         color: 'black',
         fontSize: '40px',
         };
@@ -17,6 +17,9 @@ import { Form, Button, FormControl } from 'react-bootstrap';
         fontSize: '2vw',
         top: '50px',
     }; 
+    const navlinks = {
+        color: 'black'
+    };
 
 function Nav() {
     const [user, setUser] = useState({});
@@ -35,11 +38,10 @@ function Nav() {
                 <Row style={{height:"100%", width:"100%"}}>
                     <Col>
                         <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
-                        {/* <div id="sideLeft" className="col-lg-1"> */}
-                        <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
-                        <NavLink exact to="/sets" className="nav-item nav-link">Sets</NavLink>
-                        <NavLink exact to="/study_plan" className="nav-item nav-link" >Study Plan</NavLink>
-                        <NavLink exact to="/metrics" className="nav-item nav-link" >Metrics</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>Dashboard</NavLink>
+                        <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks} >Sets</NavLink>
+                        <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks} >Study Plan</NavLink>
+                        <NavLink exact to="/metrics" className="nav-item nav-link" style={navlinks}>Metrics</NavLink>
                         <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
                     </Col>
                 </Row>
