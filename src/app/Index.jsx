@@ -12,9 +12,13 @@ import { Sets } from '@/sets'
 import { Study_Plan } from '@/study_plan';
 import { Metrics } from '@/metrics'
 
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 function App() {
     const { pathname } = useLocation();  
     const [user, setUser] = useState({});
+    const [selectedDate, setSelectedDate] = useState(null)
 
     useEffect(() => {
         const subscription = accountService.user.subscribe(x => setUser(x));
@@ -24,8 +28,8 @@ function App() {
     return (
         <div className={'app-container' + (user && ' bg-light')}>
             <Nav />
-            {/* <Searchbar/> */}
             <Alert />
+            <DatePicker className="date-picker-icon" selected={selectedDate} onChange={date => setSelectedDate(date)}/>           
             <Switch>
                 <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                 <PrivateRoute exact path="/" component={Home} />
