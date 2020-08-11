@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { accountService } from '@/_services';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated'; 
 
 function Add_Sets() {
     const user = accountService.userValue;
+
+    const tests = [
+      { value : 'Biology', label: 'biology'},
+      { value : 'math', label: 'math'},
+    ];
     
-    const welcome = {
+    /* const welcome = {
       fontSize: '2vw',
-      ///  paddingLeft: '50px',
-        /// paddingBottom: '50px'
       }; 
     const weekly = {
       fontSize: '20px',
@@ -21,27 +26,32 @@ function Add_Sets() {
       
     const recent = {
       top: '10vw',
-      };
+      }; */
    
     return (
         <div>
-              <Row>
-                <Col>
-                </Col>
-                 <Col style={welcome}>
-                  Add Set Page                  
-                <hr style={border} />
+              <Row style={{marginBottom: '5rem'}}>
+                <Col md={3}/>
+                 <Col>
+                 <form class="form-inline">
+                    <div class="form-group">
+                        <input placeholder="Set Name"
+                            type="text" style={{outline: '0'}} />
+                    </div>        
+                  </form>
                   </Col>
+                  <Col md={2}>
+                  <Select 
+                    options={tests}
+                    className="mb-3"
+                    placeholder="Select test"
+                    isSearchable
+                      />
+                  </Col>
+                  <Col md={1}/>
                 </Row>
               <Row>
-              <Col>
-              </Col>
-              <Row> </Row>
-              <Row>
-              <Col> 
-              </Col>
-              </Row>
-              <Col>
+              <Col md={{ span: 3, offset: 3 }}>
               <Card style={{ width: '40rem' }}>
                 <Card.Body>
                   <Card.Title></Card.Title>

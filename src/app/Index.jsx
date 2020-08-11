@@ -12,8 +12,6 @@ import { Sets } from '@/sets'
 import { Study_Plan } from '@/study_plan';
 import { Metrics } from '@/metrics'
 
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 import { Add_Sets } from '../add_sets';
 
 function App() {
