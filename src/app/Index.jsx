@@ -29,7 +29,6 @@ function App() {
         <div className={'app-container' + (user && ' bg-light')}>
             <Nav />
             <Alert />
-            <DatePicker className="date-picker-icon" selected={selectedDate} onChange={date => setSelectedDate(date)}/>           
             <Switch>
                 <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                 <PrivateRoute exact path="/" component={Home} />
