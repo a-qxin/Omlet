@@ -8,7 +8,7 @@ import { App } from './app';
 
 import './styles.less';
 
-// setup fake backend
+// fake backend. comment out below two lines if using real backend
 import { configureFakeBackend } from './_helpers';
 configureFakeBackend();
 
