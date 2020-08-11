@@ -3,6 +3,7 @@ import { accountService } from '@/_services';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated'; 
+import { Link } from 'react-router-dom';
 
 function Add_Sets() {
     const user = accountService.userValue;
@@ -49,6 +50,17 @@ function Add_Sets() {
                       />
                   </Col>
                   <Col md={1}/>
+                </Row>
+                <Row style={{marginBottom: '5rem'}}>
+                  <Col md={{ span: 2, offset: 3 }}>
+                    <Link style={{color: 'black'}}>Base</Link>
+                  </Col>
+                  <Col md={{ span: 2 }}>
+                    <Link style={{color: 'black'}}># of terms 1st level</Link>
+                  </Col>
+                  <Col md={{ span: 2 }}>
+                    <Link style={{color: 'black'}}># of terms 2nd level</Link>
+                  </Col>
                 </Row>
               <Row>
               <Col md={{ span: 3, offset: 3 }}>
