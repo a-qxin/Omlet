@@ -1,6 +1,6 @@
 import React from 'react';
 import { accountService } from '@/_services';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 function Sets() {
     const user = accountService.userValue;
@@ -34,15 +34,16 @@ function Sets() {
                   </Col>
                 </Row>
               <Row>
-              <Col></Col>
+              <Col>
+              </Col>
               <Row> </Row>
               <Row>
-              <Col style={weekly}> 
+              <Col> 
               </Col>
               </Row>
-              <Col></Col>
               <Col>
-                 
+              </Col>
+              <Col>
               </Col>
               </Row>
         </div>

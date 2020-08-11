@@ -14,6 +14,7 @@ import { Metrics } from '@/metrics'
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { Add_Sets } from '../add_sets';
 
 function App() {
     const { pathname } = useLocation();  
@@ -36,6 +37,7 @@ function App() {
                 <PrivateRoute path="/sets" component={Sets} />
                 <PrivateRoute path="/study_plan" component={Study_Plan} />
                 <PrivateRoute path="/metrics" component={Metrics} />
+                <PrivateRoute path="/add_sets" component={Add_Sets} />
                 <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
                 <Route path="/account" component={Account} />
                 <Redirect from="*" to="/" />
