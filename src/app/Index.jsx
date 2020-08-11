@@ -26,6 +26,9 @@ function App() {
                 <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                 <PrivateRoute exact path="/" component={Home} />
                 <PrivateRoute path="/profile" component={Profile} />
+                <PrivateRoute path="/sets" component={Sets} />
+                <PrivateRoute path="/study_plan" component={Study_Plan} />
+                <PrivateRoute path="/metrics" component={Metrics} />
                 <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
                 <Route path="/account" component={Account} />
                 <Redirect from="*" to="/" />
