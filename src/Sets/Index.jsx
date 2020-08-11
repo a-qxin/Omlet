@@ -22,14 +22,7 @@ function Sets() {
     const recent = {
       top: '10vw',
       };
-    /* const logo = {
-        position: 'relative',
-        right: '-1500px',
-        bottom: '470px'
-
-    }; */
-
-    /// Code returned when user reaches home page
+   
     return (
         <div>
               <Row>
