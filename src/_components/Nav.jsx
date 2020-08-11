@@ -8,26 +8,18 @@ import { accountService } from '@/_services';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, Button, FormControl } from 'react-bootstrap';
 
-     const omlet = {
+    const omlet = {
         color: 'black',
         fontSize: '40px',
-      ///  paddingLeft: '50px',
-        /// paddingBottom: '50px'
         };
 
     const welcome = {
         fontSize: '2vw',
         top: '50px',
     }; 
-
-    /* const sidebar = {
-      flexDirection: 'column',
-      justifyContent: 'center',
-      color: 'black',
-      fontSize: '20px',
-      paddingTop: '60px',
-      paddingLeft: '50px', 
-        }; */
+    const navlinks = {
+        color: 'black'
+    };
 
 function Nav() {
     const [user, setUser] = useState({});
@@ -45,14 +37,11 @@ function Nav() {
             <nav className="navbar navbar-expand vertical-nav">
                 <Row style={{height:"100%", width:"100%"}}>
                     <Col>
-                        <br/>
                         <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
-                        {/* <Col><img src="/public/images/bird.jpg" alt="Logo"/></Col> */}
-                        <br/><br/><br/><br/>
-                        <NavLink exact to="/" className="nav-item nav-link" >Dashboard</NavLink>
-                        <NavLink exact to="/" className="nav-item nav-link" >Sets</NavLink>
-                        <NavLink exact to="/" className="nav-item nav-link" >Study Plan</NavLink>
-                        <NavLink exact to="/" className="nav-item nav-link" >Metrics</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>Dashboard</NavLink>
+                        <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks} >Sets</NavLink>
+                        <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks} >Study Plan</NavLink>
+                        <NavLink exact to="/metrics" className="nav-item nav-link" style={navlinks}>Metrics</NavLink>
                         <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
                     </Col>
                 </Row>
@@ -69,6 +58,7 @@ function Nav() {
                 </Col>
             </Row>    
                                   
+                    
                 {user.role === Role.Admin &&
                     <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
                 }
