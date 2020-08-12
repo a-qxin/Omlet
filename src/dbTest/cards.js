@@ -17,3 +17,7 @@ const cardsSchema = new Schema ({
 const cards = mongoose.model('cards'.cardsSchema);
 
 module.exports = Cards;
+
+//let myCard = new Card;
+// https://mongoosejs.com/docs/index.html
+// https://mongoosejs.com/docs/schematypes.html
