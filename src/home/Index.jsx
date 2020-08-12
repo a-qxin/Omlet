@@ -1,6 +1,8 @@
 import React from 'react';
 import { accountService } from '@/_services';
 import { Container, Row, Col } from 'react-bootstrap';
+import { NavLink, Route } from 'react-router-dom';
+
 
 function Home() {
     const user = accountService.userValue;
@@ -60,9 +62,9 @@ function Home() {
               </Row>
               <Col />
               <Col>
-              <a href='/'>
+              <a href='/add_sets'>
               <img src="https://img.icons8.com/android/24/000000/plus.png"/>
-               Add Set  
+              Add Set
                 <hr style={underline2}/>
               </a>
               </Col>
