@@ -16,7 +16,7 @@
     <!-- <br />
     <a href="/">View Demo</a>
     ·
-    <a href="https://www.buildconnect.io">BuildConnect</a>
+    <a href="https://www.buildconnect.io">BuildConnect</a>-->
   </p>
 </p>
 
@@ -29,12 +29,11 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [Omlet](https://github.com/a-qxin/omelette/) is a desktop flashcard study app built by students for students.
 
-A team of four students came together via [BuildConnect](https://www.buildconnect.io) to design a study web application that allows students to organize their flashcards in a hierarchical format.
+Our team of four (2 designers, 2 devs) came together via [BuildConnect](https://www.buildconnect.io) to design a study web application that allows students to study more efficiently with a clean user experience + have the option to organize flashcards in a hierarchical format.
 
 This is an ongoing project.
 
@@ -42,15 +41,28 @@ This is an ongoing project.
 
 * [React](https://reactjs.org)
 * [MongoDB](https://www.mongodb.com)
+* [Node.js](https://nodejs.org/en/)
 * [Mongoose](https://mongoosejs.com)
 * [React Bootstrap](https://react-bootstrap.github.io)
+* [Express](https://expressjs.com)
+* [SwaggerUI](https://swagger.io/tools/swagger-ui/)
 
 ## Getting Started
 
-To clone a local copy of this repository, use:
+To *clone* a local copy of this repository, use:
 ```
 git clone https://github.com/a-qxin/omelette/
 ```
+
+To *run* our app, we use the following to run both the frontend and backend:
+
+frontend: 
+
+``` npm i ``` + ```npm start``` (port 8080)
+
+backend: 
+
+```cd backend``` + ```npm i``` + ```npm start``` (port 4000)
 
 ## Contact
 
