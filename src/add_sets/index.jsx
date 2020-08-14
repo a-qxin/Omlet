@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { accountService } from '@/_services';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, CardGroup, CardDeck, onSubmit, handleSubmit, Button } from 'react-bootstrap';
 import Select from 'react-select';
-import makeAnimated from 'react-select/animated'; 
 import { Link } from 'react-router-dom';
+import { IncorporationForm, Card_Form } from './Card_Form'
 
 function Add_Sets() {
     const user = accountService.userValue;
@@ -24,6 +24,8 @@ function Add_Sets() {
                             type="text" style={{outline: '0'}} />
                     </div>        
                   </form>
+                  </Col>
+                  <Col>
                   </Col>
                   <Col md={2}>
                   <Select 
@@ -48,28 +50,25 @@ function Add_Sets() {
                 </Row>
               <Row>
               <Col md={{ span: 3, offset: 3 }}>
-              <Card style={{ width: '40rem' }}>
-                <Card.Body>
-                  <Card.Title></Card.Title>
-                  <Card.Text>
-                  <form class="form-inline">
-                    <div class="form-group">
-                        <input placeholder="Term"
-                            type="text" style={{outline: '0', marginRight: '3rem'}} />
-                    </div>        
-                    <div class="form-group" >
-                        <input placeholder="Definition"
-                            type="text" style={{outline: '0'}} />
-                    </div>
-                  </form>
-                  </Card.Text>
-                  
-                  <Button variant="link" style={{float: "right"}}><img src="https://img.icons8.com/windows/32/000000/play.png"/></Button>
-                  <Button variant="link" style={{float: "right"}}><img src="https://img.icons8.com/small/16/000000/delete.png"/></Button>
-                  <Button variant="link" style={{float: "right"}}><img src="https://img.icons8.com/small/16/000000/resize-vertical.png"/></Button>
-                </Card.Body>
-              </Card></Col>
+              <Card_Form />
+              </Col>
               <Col>
+             {/* Bad attempt at adding hoverable cards with cardeck
+             
+             <CardDeck style={{ width: '10rem' }}>
+              <Card>
+                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This 
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card>
+                
+              </Card>
+    </CardDeck> */}
               </Col>
               </Row>
         </div>
