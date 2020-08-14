@@ -13,22 +13,6 @@ function Add_Sets() {
       { value : 'math', label: 'math'},
     ];
     
-    /* const welcome = {
-      fontSize: '2vw',
-      }; 
-    const weekly = {
-      fontSize: '20px',
-      };
-    const border = {
-        border: '1px solid #C4C4C4',
-        width: '77vw',
-  
-      };
-      
-    const recent = {
-      top: '10vw',
-      }; */
-   
     return (
         <div>
               <Row style={{marginBottom: '5rem'}}>
