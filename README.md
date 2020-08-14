@@ -43,7 +43,7 @@ This is an ongoing project.
 * [React](https://reactjs.org)
 * [MongoDB](https://www.mongodb.com)
 * [Mongoose](https://mongoosejs.com)
-* [Bootstrap](https://getbootstrap.com)
+* [React Bootstrap](https://react-bootstrap.github.io)
 
 ## Getting Started
 
