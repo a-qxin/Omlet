@@ -32,7 +32,7 @@
 
 [Omlet](https://github.com/a-qxin/omelette/) is a desktop flashcard study app built by students for students.
 
-Our team of four (2 designers, 2 devs) came together via [BuildConnect](https://www.buildconnect.io) to design a study web app that allows students to study more efficiently with a clean user experience + to have the option to organize flashcards in a hierarchical format.
+Our team of four (2 designers, 2 devs) came together via [BuildConnect](https://www.buildconnect.io) to design a web app that allows students to study more efficiently with a clean user experience + to have the option to organize flashcards in a hierarchical format.
 
 This is an ongoing project.
 
