@@ -25,8 +25,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Getting Started](#getting-started)
-* [Contact](#contact)
+* [Getting Started](#getting-started)<!-- * [Contact](#contact) -->
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
@@ -75,12 +74,6 @@ npm i
 
 npm start
 ```
-
-## Contact
-
-Project Link: https://github.com/a-qxin/omelette/
-
-* [a-qxin](https://github.com/a-qxin/)
 
 ## Acknowledgements
 
