@@ -37,7 +37,7 @@ function Nav() {
             <nav className="navbar navbar-expand vertical-nav">
                 <Row style={{height:"100%", width:"100%"}}>
                     <Col>
-                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet <img src='public/images/omlet-logo.png' style={{width:"40px", height:"40px"}}/> </NavLink>
                         <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>Dashboard</NavLink>
                         <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks} >Sets</NavLink>
                         <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks} >Study Plan</NavLink>
