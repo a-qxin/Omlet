@@ -35,9 +35,9 @@ function Nav() {
     return (
         <div>
             <nav className="navbar navbar-expand vertical-nav">
-                <Row style={{height:"100%", width:"100%"}}>
+                <Row style={{height:"100%"}}>
                     <Col>
-                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet <img src='public/images/omlet-logo.png' style={{width:"40px", height:"40px"}}/> </NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}>Omlet <img src='public/images/omlet-logo.png' style={{ width: "40px", height: "40px" }} /> </NavLink>
                         <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>Dashboard</NavLink>
                         <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks} >Sets</NavLink>
                         <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks} >Study Plan</NavLink>
@@ -59,24 +59,24 @@ function Nav() {
             </Row>    
                                   
                     
-                {user.role === Role.Admin &&
-                    <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
-                }
-            <Route path="/admin" component={AdminNav} />
+            {/* {user.role === Role.Admin &&
+                <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
+            }
+            <Route path="/admin" component={AdminNav} /> */}
         </div>
     );
 }
 
-function AdminNav({ match }) {
-    const { path } = match;
+// function AdminNav({ match }) {
+//     const { path } = match;
 
-    return (
-        <nav className="admin-nav navbar navbar-expand navbar-light">
-            <div className="navbar-nav">
-                <NavLink to={`${path}/users`} className="nav-item nav-link">Users</NavLink>
-            </div>
-        </nav>
-    );
-}
+//     return (
+//         <nav className="admin-nav navbar navbar-expand navbar-light">
+//             <div className="navbar-nav">
+//                 <NavLink to={`${path}/users`} className="nav-item nav-link">Users</NavLink>
+//             </div>
+//         </nav>
+//     );
+// }
 
 export { Nav }; 
