@@ -12,9 +12,16 @@ import { ResetPassword } from './ResetPassword';
 function Account({ history, match }) {
     const { path } = match;
 
+    const logo = {
+        width: '100px',
+        height:'auto',
+        margin:'30px'
+    };
     const fixImage = {
         width:'100%',
-        height:'auto'
+        height:'55vh',
+        position:'absolute',
+        zIndex:'2'
     };
 
     useEffect(() => {
@@ -26,10 +33,12 @@ function Account({ history, match }) {
 
     return (
         <div>
+            <img src='../public/images/omlet-logo-black.png' style={ logo }></img>
+
             <div className="container">
                 <div className="row">
                     <div className="col-sm-8 offset-sm-2 mt-5">
-                        <div className="card m-3">
+                        <div>
                             <Switch>
                                 <Route path={`${path}/login`} component={Login} />
                                 <Route path={`${path}/register`} component={Register} />
