@@ -12,6 +12,11 @@ import { ResetPassword } from './ResetPassword';
 function Account({ history, match }) {
     const { path } = match;
 
+    const fixImage = {
+        width:'100%',
+        height:'auto'
+    };
+
     useEffect(() => {
         // redirect to home if already logged in
         if (accountService.userValue) {
@@ -20,20 +25,24 @@ function Account({ history, match }) {
     }, []);
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-sm-8 offset-sm-2 mt-5">
-                    <div className="card m-3">
-                        <Switch>
-                            <Route path={`${path}/login`} component={Login} />
-                            <Route path={`${path}/register`} component={Register} />
-                            <Route path={`${path}/verify-email`} component={VerifyEmail} />
-                            <Route path={`${path}/forgot-password`} component={ForgotPassword} />
-                            <Route path={`${path}/reset-password`} component={ResetPassword} />
-                        </Switch>
+        <div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-8 offset-sm-2 mt-5">
+                        <div className="card m-3">
+                            <Switch>
+                                <Route path={`${path}/login`} component={Login} />
+                                <Route path={`${path}/register`} component={Register} />
+                                <Route path={`${path}/verify-email`} component={VerifyEmail} />
+                                <Route path={`${path}/forgot-password`} component={ForgotPassword} />
+                                <Route path={`${path}/reset-password`} component={ResetPassword} />
+                            </Switch>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <img src='../public/images/login-bg.png' style={ fixImage }></img>
         </div>
     );
 }
