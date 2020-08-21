@@ -6,6 +6,11 @@ import * as Yup from 'yup';
 import { accountService, alertService } from '@/_services';
 
 function Login({ history, location }) {
+    
+    const centerText = {
+        textAlign:'center'
+    };
+
     const initialValues = {
         email: '',
         password: ''
@@ -37,19 +42,17 @@ function Login({ history, location }) {
                 <Form>
                     <h3 style={{textAlign:'center', marginTop:'10px', marginBottom:'80px'}}>Log In</h3>
                     <div>
-                        <div className="form-group" style={{textAlign:'center'}}>
-                            {/* <label>Email</label> */}
+                        <div className="form-group" style={centerText}>
                             <Field placeholder="Email" name="email" type="text" className={ (errors.email && touched.email ? ' is-invalid' : '')} />
                             <ErrorMessage name="email" component="div" className="invalid-feedback" />
                         </div>
 
-                        <div className="form-group" style={{textAlign:'center'}}>
-                            {/* <label>Password</label> */}
+                        <div className="form-group" style={centerText}>
                             <Field placeholder="Password" name="password" type="password" className={ (errors.password && touched.password ? ' is-invalid' : '')} />
                             <ErrorMessage name="password" component="div" className="invalid-feedback" />
                         </div>
 
-                        <div className='form-group' style={{textAlign:'center' }}>
+                        <div className='form-group' style={centerText}>
                             <button type="submit" disabled={isSubmitting} className="btn btn-primary">
                                 {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                                     Login
