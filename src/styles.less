@@ -6,9 +6,12 @@ a { cursor: pointer; }
     min-height: 650px;
 } 
 
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: proxima-nova, sans-serif;
+}
+
 /// Styling for search bar
 .wrapper {
-  // position: fixed;
   display: flex;
   min-width: 100px;
 }
@@ -38,32 +41,30 @@ input {
   outline: none;
 }
 
-.search:hover, .search:focus {
-  border: 1px solid #009688;
-  background-color: white;
-}
+// .search:hover, .search:focus {
+//   border: 1px solid #009688;
+//   background-color: white;
+// }
 
 ///Styling for navbar
 .vertical-nav {
   min-width: 17rem;
   width: 17rem;
   height: 100vh;
-  // position: fixed;
-  // top: 0px;
-  // left: 0px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
   position:absolute;
   z-index:1;
 }
 
-// @media (max-width: 1500px) {
-  // html {
-  //   .element{
-  //     position:absolute;
-  //     top: 0; bottom: 430px; left: 280px; right: 0;
-  //     margin: auto;
-  //     height: 20px; /*requires explicit height*/
-  //   }
-  // }
-// }
+/* for profile */
+@media (max-width: 1500px) {
+  html {
+    .element{
+      position:absolute;
+      top: 0; bottom: 430px; left: 280px; right: 0;
+      margin: auto;
+      height: 20px; /*requires explicit height*/
+    }
+  }
+}
