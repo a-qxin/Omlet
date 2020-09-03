@@ -53,8 +53,7 @@ function Register({ history }) {
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
             {({ errors, touched, isSubmitting }) => (
                 <Form>
-                    {/* <h3 className="card-header">Register</h3> */}
-                    <h3 style={{textAlign:'center'}}>Register</h3>
+                    <h3 style={{textAlign:'center', letterSpacing:'0.06em'}}><b>Create Profile</b></h3>
                     <div className="card-body">
                         {/* <div className="form-row"> */}
                             {/* <div className="form-group col">

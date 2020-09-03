@@ -58,15 +58,13 @@ function Login({ history, location }) {
                                     Login
                                 </button>
                         </div>
-                        <div className="form-row">
-                           <div style={{margin:'auto'}}>
-                                <div className="row">
-                                    <Link to="forgot-password" className="btn btn-link pr-0">Forgot Password?</Link>
-                                </div>
+                        <div style={{margin:'auto'}}>
+                            <div className="row">
+                                <Link to="forgot-password" className="btn btn-link pr-0">Forgot Password?</Link>
+                            </div>
 
-                                <div className="row">
-                                    <Link to="register" className="btn btn-link">Register</Link>
-                                </div>
+                            <div className="row">
+                                <Link to="register" className="btn btn-link">Register</Link>
                             </div>
                         </div>
                     </div>
