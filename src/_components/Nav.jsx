@@ -37,11 +37,25 @@ function Nav() {
             <nav className="navbar navbar-expand vertical-nav">
                 <Row style={{height:"100%"}}>
                     <Col>
-                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}><img src='public/images/omlet-logo.png' style={{ width: "90px" }} /> </NavLink>
-                        <NavLink exact to="/" className="nav-item nav-link" style={navlinks}><img src='public/images/dash_icon.svg'></img>Dashboard</NavLink>
-                        <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks} ><img src='public/images/sets_icon.svg'></img>Sets</NavLink>
-                        <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks} ><img src='public/images/plan_icon.svg'></img>Study Plan</NavLink>
-                        <NavLink exact to="/metrics" className="nav-item nav-link" style={navlinks}><img src='public/images/metric_icon.svg'></img>Metrics</NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" style={omlet}>
+                            <img src='public/images/omlet-logo.png' style={{ width: "90px" }} /> 
+                        </NavLink>
+                        <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>
+                            {/* <img src='public/images/dash_icon.svg'></img> */}
+                            Dashboard
+                        </NavLink>
+                        <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks}>
+                            {/* <img src='public/images/sets_icon.svg'></img> */}
+                            Sets
+                        </NavLink>
+                        <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks}>
+                            {/* <img src='public/images/plan_icon.svg'></img> */}
+                            Study Plan
+                        </NavLink>
+                        <NavLink exact to="/metrics" className="nav-item nav-link" style={navlinks}>
+                            {/* <img src='public/images/metric_icon.svg'></img> */}
+                            Metrics
+                        </NavLink>
                         <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
                     </Col>
                 </Row>
