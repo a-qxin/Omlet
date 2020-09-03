@@ -13,11 +13,11 @@ function Account({ history, match }) {
     const { path } = match;
 
     const logo = {
-        width: '100px',
+        width: '80px',
         height:'auto',
         margin:'30px'
     };
-    const fixImage = {
+    const bgShape = {
         width:'100%',
         height:'55vh',
         position:'absolute',
@@ -33,7 +33,7 @@ function Account({ history, match }) {
 
     return (
         <div>
-            <img src='../public/images/omlet-logo-black.png' style={ logo }></img>
+            <img src='../public/images/omlet-logo.png' style={ logo }></img>
 
             <div className="container">
                 <div className="row">
@@ -51,7 +51,7 @@ function Account({ history, match }) {
                 </div>
             </div>
 
-            <img src='../public/images/login-bg.png' style={ fixImage }></img>
+            <img src='../public/images/login-bg.png' style={ bgShape }></img>
         </div>
     );
 }
