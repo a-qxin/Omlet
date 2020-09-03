@@ -46,7 +46,7 @@ function Home() {
         <Col>
         </Col>
         <Col style={welcome}>
-          Welcome back <b>{user.firstName}</b>
+          <h2>Welcome back <b>{user.firstName}</b></h2>
           <hr style={border} />
         </Col>
       </Row>

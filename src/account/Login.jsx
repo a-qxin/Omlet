@@ -40,7 +40,7 @@ function Login({ history, location }) {
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit} >
             {({ errors, touched, isSubmitting }) => (
                 <Form>
-                    <h3 style={{textAlign:'center', marginTop:'10px', marginBottom:'80px'}}>Log In</h3>
+                    <h3 style={{textAlign:'center', marginTop:'10px', marginBottom:'80px', letterSpacing:'.06em'}}><b>Log In</b></h3>
                     <div>
                         <div className="form-group" style={centerText}>
                             <Field placeholder="Email" name="email" type="text" className={ (errors.email && touched.email ? ' is-invalid' : '')} />

@@ -17,8 +17,8 @@ function Register({ history }) {
     };
 
     const validationSchema = Yup.object().shape({
-        title: Yup.string()
-            .required('Title is required'),
+        // title: Yup.string()
+        //     .required('Title is required'),
         firstName: Yup.string()
             .required('First Name is required'),
         lastName: Yup.string()
@@ -56,8 +56,8 @@ function Register({ history }) {
                     {/* <h3 className="card-header">Register</h3> */}
                     <h3 style={{textAlign:'center'}}>Register</h3>
                     <div className="card-body">
-                        <div className="form-row">
-                            <div className="form-group col">
+                        {/* <div className="form-row"> */}
+                            {/* <div className="form-group col">
                                 <label>Title</label>
                                 <Field name="title" as="select" className={'form-control' + (errors.title && touched.title ? ' is-invalid' : '')}>
                                     <option value=""></option>
@@ -67,35 +67,35 @@ function Register({ history }) {
                                     <option value="Ms">Ms</option>
                                 </Field>
                                 <ErrorMessage name="title" component="div" className="invalid-feedback" />
-                            </div>
-                            <div className="form-group col-5">
+                            </div> */}
+                            <div className="form-group">
                                 <label>First Name</label>
                                 <Field name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
                                 <ErrorMessage name="firstName" component="div" className="invalid-feedback" />
                             </div>
-                            <div className="form-group col-5">
+                        {/* </div> */}
+                        <div className="form-group">
                                 <label>Last Name</label>
                                 <Field name="lastName" type="text" className={'form-control' + (errors.lastName && touched.lastName ? ' is-invalid' : '')} />
                                 <ErrorMessage name="lastName" component="div" className="invalid-feedback" />
                             </div>
-                        </div>
                         <div className="form-group">
                             <label>Email</label>
                             <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
                             <ErrorMessage name="email" component="div" className="invalid-feedback" />
                         </div>
-                        <div className="form-row">
-                            <div className="form-group col">
+                        {/* <div className="form-row"> */}
+                            <div className="form-group">
                                 <label>Password</label>
                                 <Field name="password" type="password" className={'form-control' + (errors.password && touched.password ? ' is-invalid' : '')} />
                                 <ErrorMessage name="password" component="div" className="invalid-feedback" />
                             </div>
-                            <div className="form-group col">
+                            <div className="form-group">
                                 <label>Confirm Password</label>
                                 <Field name="confirmPassword" type="password" className={'form-control' + (errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} />
                                 <ErrorMessage name="confirmPassword" component="div" className="invalid-feedback" />
                             </div>
-                        </div>
+                        {/* </div> */}
                         <div className="form-group form-check">
                             <Field type="checkbox" name="acceptTerms" id="acceptTerms" className={'form-check-input ' + (errors.acceptTerms && touched.acceptTerms ? ' is-invalid' : '')} />
                             <label htmlFor="acceptTerms" className="form-check-label">Accept Terms & Conditions</label>
