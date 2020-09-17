@@ -7,6 +7,11 @@ import { accountService, alertService } from '@/_services';
 
 function Login({ history, location }) {
     
+    const loginButton = {
+        color: 'yellow',
+        background:'yellow'
+    };
+
     const centerText = {
         textAlign:'center'
     };
@@ -53,7 +58,7 @@ function Login({ history, location }) {
                         </div>
 
                         <div className='form-group' style={centerText}>
-                            <button type="submit" disabled={isSubmitting} className="btn btn-primary">
+                            <button type="submit" disabled={isSubmitting} id={loginButton}className="btn">
                                 {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                                     Login
                                 </button>
