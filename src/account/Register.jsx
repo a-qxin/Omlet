@@ -6,6 +6,11 @@ import * as Yup from 'yup';
 import { accountService, alertService } from '@/_services';
 
 function Register({ history }) {
+    const regButton = {
+        background: '#ffe566',
+        color: '#ffe566',
+    }
+    
     const initialValues = {
         title: '',
         firstName: '',
@@ -101,7 +106,7 @@ function Register({ history }) {
                             <ErrorMessage name="acceptTerms" component="div" className="invalid-feedback" />
                         </div>
                         <div className="form-group">
-                            <button type="submit" disabled={isSubmitting} className="btn btn-primary">
+                            <button type="submit" disabled={isSubmitting} className="btn regButton">
                                 {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                                 Register
                             </button>
