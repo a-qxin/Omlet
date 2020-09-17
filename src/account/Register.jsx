@@ -7,8 +7,9 @@ import { accountService, alertService } from '@/_services';
 
 function Register({ history }) {
     const regButton = {
-        background: '#ffe566',
-        color: '#ffe566',
+        backgroundColor: '#ffe566 !important',
+        color: '#ffe566 !important',
+        padding: 'none'
     }
     
     const initialValues = {
@@ -73,30 +74,30 @@ function Register({ history }) {
                                 <ErrorMessage name="title" component="div" className="invalid-feedback" />
                             </div> */}
                             <div className="form-group">
-                                <label>First Name</label>
-                                <Field name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
+                                {/* <label>First Name</label> */}
+                                <Field placeholder="First Name" name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
                                 <ErrorMessage name="firstName" component="div" className="invalid-feedback" />
                             </div>
                         {/* </div> */}
                         <div className="form-group">
-                                <label>Last Name</label>
-                                <Field name="lastName" type="text" className={'form-control' + (errors.lastName && touched.lastName ? ' is-invalid' : '')} />
+                                {/* <label>Last Name</label> */}
+                                <Field placeholder="Last Name" name="lastName" type="text" className={'form-control' + (errors.lastName && touched.lastName ? ' is-invalid' : '')} />
                                 <ErrorMessage name="lastName" component="div" className="invalid-feedback" />
                             </div>
                         <div className="form-group">
-                            <label>Email</label>
-                            <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
+                            {/* <label>Email</label> */}
+                            <Field placeholder="Email" name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
                             <ErrorMessage name="email" component="div" className="invalid-feedback" />
                         </div>
                         {/* <div className="form-row"> */}
                             <div className="form-group">
-                                <label>Password</label>
-                                <Field name="password" type="password" className={'form-control' + (errors.password && touched.password ? ' is-invalid' : '')} />
+                                {/* <label>Password</label> */}
+                                <Field placeholder="Password" name="password" type="password" className={'form-control' + (errors.password && touched.password ? ' is-invalid' : '')} />
                                 <ErrorMessage name="password" component="div" className="invalid-feedback" />
                             </div>
                             <div className="form-group">
-                                <label>Confirm Password</label>
-                                <Field name="confirmPassword" type="password" className={'form-control' + (errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} />
+                                {/* <label>Confirm Password</label> */}
+                                <Field placeholder="Confirm Password" name="confirmPassword" type="password" className={'form-control' + (errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} />
                                 <ErrorMessage name="confirmPassword" component="div" className="invalid-feedback" />
                             </div>
                         {/* </div> */}
@@ -106,7 +107,7 @@ function Register({ history }) {
                             <ErrorMessage name="acceptTerms" component="div" className="invalid-feedback" />
                         </div>
                         <div className="form-group">
-                            <button type="submit" disabled={isSubmitting} className="btn regButton">
+                            <button id="yellowButton" type="submit" disabled={isSubmitting}>
                                 {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                                 Register
                             </button>
