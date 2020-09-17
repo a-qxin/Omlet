@@ -1,4 +1,11 @@
-// global styles
+/* less color variables */
+@brand-color:     #ffe566;
+@subject1-color:  #ff6767;
+@subject2-color:  #00cabe;
+@subject3-color:  #B073ff;
+@subject4-color:  #2ee340;
+
+/* global styles */
 a { cursor: pointer; }
 
  .app-container {
@@ -6,62 +13,73 @@ a { cursor: pointer; }
     min-height: 650px;
 } 
 
-/// Styling for search bar
+* {
+  font-family: 'proxima-nova', sans-serif;
+  letter-spacing: .03em;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* navbar */
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  position:absolute;
+  z-index:1;
+}
+
+/* search bar */
 .wrapper {
-    position: fixed;
-    display: flex;
-    min-width: 100px;
-  }
-  
-  .search {
-    height: 25px;
-    width: 100%;
-    padding: 2px 23px 2px 30px;
-    outline: 0;
-  }
-  
-  .search-icon {
-    position: absolute;
-    top: 7px;
-    left: 8px;
-    width: 14px;
-  }
+  display: flex;
+  min-width: 100px;
+}
 
-  input {
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
-  }
-  
-  .no-outline:focus {
-    outline: none;
-  }
-/*
-.search:hover, .search:focus {
-    border: 1px solid #009688;
-    background-color: white;
-  } */
+.search {
+  height: 25px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+}
 
-  ///Styling for navbar
-  .vertical-nav {
-    min-width: 17rem;
-    width: 17rem;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s;
-  }
+.search-icon {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 14px;
+}
 
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+/* profile */
 @media (max-width: 1500px) {
-    html {
-      .element{
-        position:absolute;
-        top: 0; bottom: 430px; left: 280px; right: 0;
-        margin: auto;
-        height: 20px; /*requires explicit height*/
-      }
+  html {
+    .element{
+      position:absolute;
+      top: 0; bottom: 430px; left: 280px; right: 0;
+      margin: auto;
+      height: 20px; /* requires explicit height */
     }
+  }
+}
+
+/* register */
+.yellow-button, #yellowButton {
+  background-color: @brand-color !important;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
 }

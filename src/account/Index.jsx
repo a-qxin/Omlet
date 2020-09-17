@@ -12,6 +12,18 @@ import { ResetPassword } from './ResetPassword';
 function Account({ history, match }) {
     const { path } = match;
 
+    const logo = {
+        width: '80px',
+        height:'auto',
+        margin:'30px'
+    };
+    const bgShape = {
+        width:'100%',
+        height:'55vh',
+        position:'absolute',
+        zIndex:'2'
+    };
+
     useEffect(() => {
         // redirect to home if already logged in
         if (accountService.userValue) {
@@ -20,20 +32,26 @@ function Account({ history, match }) {
     }, []);
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-sm-8 offset-sm-2 mt-5">
-                    <div className="card m-3">
-                        <Switch>
-                            <Route path={`${path}/login`} component={Login} />
-                            <Route path={`${path}/register`} component={Register} />
-                            <Route path={`${path}/verify-email`} component={VerifyEmail} />
-                            <Route path={`${path}/forgot-password`} component={ForgotPassword} />
-                            <Route path={`${path}/reset-password`} component={ResetPassword} />
-                        </Switch>
+        <div>
+            <img src='../public/images/omlet-logo.png' style={ logo }></img>
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-8 offset-sm-2 mt-5">
+                        <div>
+                            <Switch>
+                                <Route path={`${path}/login`} component={Login} />
+                                <Route path={`${path}/register`} component={Register} />
+                                <Route path={`${path}/verify-email`} component={VerifyEmail} />
+                                <Route path={`${path}/forgot-password`} component={ForgotPassword} />
+                                <Route path={`${path}/reset-password`} component={ResetPassword} />
+                            </Switch>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <img src='../public/images/login-bg.png' style={ bgShape }></img>
         </div>
     );
 }
