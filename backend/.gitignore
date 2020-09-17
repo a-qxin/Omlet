@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 .env
 
 /node_modules
 
 config.json
-=======
+
 .vscode
-.env
->>>>>>> master
