@@ -24,29 +24,24 @@ function Sets() {
       };
    
     return (
-        <div>
-              <Row>
-                <Col>
-                </Col>
-                 <Col style={welcome}>
-                Sets                    
-                <hr style={border} />
-                  </Col>
-                </Row>
-              <Row>
-              <Col>
-              </Col>
-              <Row> </Row>
-              <Row>
-              <Col> 
-              </Col>
-              </Row>
-              <Col>
-              </Col>
-              <Col>
-              </Col>
-              </Row>
-        </div>
+      <div>
+        <Row>
+          <Col></Col>
+          <Col style={welcome}>
+            Sets
+            <hr style={border} />
+          </Col>
+        </Row>
+        {/* <Row>
+          <Col></Col>
+          <Row></Row>
+          <Row>
+            <Col></Col>
+          </Row>
+          <Col></Col>
+          <Col></Col>
+        </Row> */}
+      </div>
 
     );
 }

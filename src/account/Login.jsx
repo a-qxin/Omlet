@@ -43,7 +43,7 @@ function Login({ history, location }) {
                     <h3 style={{textAlign:'center', marginBottom:'80px', letterSpacing:'.06em'}}><b>Log In</b></h3>
                     <div>
                         <div className="form-group" style={centerText}>
-                            <Field placeholder="Email" name="email" type="text" className={ (errors.email && touched.email ? ' is-invalid' : '')} />
+                            <Field placeholder="Email" name="email" type="text" className={ (errors.email && touched.email ? ' is-invalid' : '')}/>
                             <ErrorMessage name="email" component="div" className="invalid-feedback" />
                         </div>
 

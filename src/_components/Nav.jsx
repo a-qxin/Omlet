@@ -65,7 +65,9 @@ function Nav() {
                 
             <Row>
                 <Col sm={3}/>
-                <Col sm={5} style={{top:'20px'}}><Searchbar/></Col>
+                <Col sm={5} style={{top:'20px'}}>
+                    <Searchbar/>
+                </Col>
                 <Col sm={3}/>
                 <Col>
                     <NavLink to="/profile" className="nav-item nav-link pt-4" ><img src='public/images/omlet_mascot.png' style={{width:"40px", height:"40px"}}></img></NavLink>
