@@ -25,6 +25,17 @@ a {
   outline: none;
 }
 
+.rainbow {
+  width: 150px;
+  height: 2px;
+  background: rgb(115,255,129); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(115,255,129,1) 0%, rgba(115,255,248,1) 17%, rgba(176,115,255,1) 47%, rgba(255,115,115,1) 72%, rgba(255,182,115,1) 95%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(115,255,129,1) 0%,rgba(115,255,248,1) 17%,rgba(176,115,255,1) 47%,rgba(255,115,115,1) 72%,rgba(255,182,115,1) 95%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(115,255,129,1) 0%,rgba(115,255,248,1) 17%,rgba(176,115,255,1) 47%,rgba(255,115,115,1) 72%,rgba(255,182,115,1) 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73ff81', endColorstr='#ffb673',GradientType=1 ); /* IE6-9 */
+  border-radius: 40px;
+}
+
 /* navbar */
 .vertical-nav {
   min-width: 17rem;
