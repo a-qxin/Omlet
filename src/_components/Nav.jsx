@@ -21,7 +21,6 @@ const circle = {
 };
 const navlinks = {
   color: 'black',
-  // textAlign:'center',
   fontSize:'13px',
 };
 const navIcons = {
@@ -82,7 +81,7 @@ function Nav() {
               <p style={navText}>Metrics</p>
             </NavLink>
 
-            <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
+            <a onClick={accountService.logout} className="nav-item nav-link" style={{position:'absolute', bottom:'0', marginLeft:'20px', fontSize: '14px'}} >Logout</a>
 
           </Col>
         </Row>

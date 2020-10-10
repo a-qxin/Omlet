@@ -42,6 +42,12 @@ function Home() {
   const border = {
     border: '1px solid #C4C4C4',
     width: '90vw',
+    marginTop:'30px',
+  };
+  const setTabs = {
+    display:'flex',
+    margin: '30px 36px 30px 0',
+    float:'right'
   };
 
   return (
@@ -50,6 +56,34 @@ function Home() {
       <div style={homeContainer}>
         <h2>Welcome back <b>{user.firstName}</b></h2>
         <hr style={border} />
+
+        <div>
+          <div>
+          {/* exp stuff */}
+          </div>
+
+          <div style={setTabs}>
+
+            <div style={{marginRight:'150px'}}>
+              <a href='/'>Recently Studied</a>
+              <hr style={{border:'1px solid black', width: '125px'}} />
+            </div>
+
+            <div>
+              <a href='/' style={{textDecoration:'none'}}>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="https://img.icons8.com/android/24/000000/plus.png" />
+                <b>&nbsp;&nbsp;&nbsp;Add Set</b>
+              </a>
+              <hr class='rainbow'></hr>
+            </div>
+
+          </div>
+        </div>
+        
+        
+        
+
       </div>
 
       {/* <Row>
