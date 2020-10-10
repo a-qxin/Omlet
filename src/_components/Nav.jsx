@@ -58,13 +58,13 @@ function Nav() {
         </Row>
       </nav>
 
-      <div style={{ margin: '0 0 30px 270px', padding: '0 0 18px 0', display:'flex', boxShadow: '0 5px 3px -4px #c4c4c4' }}>
+      <div style={{ margin: '0 0 30px 270px', padding: '0 0 20px 0', display:'flex', boxShadow: '0 5px 3px -4px #c4c4c4' }}>
         <div style={{width:'100%', padding:'40px 0 0 100px'}}>
           <Searchbar />
         </div>
         <div>
           <NavLink to="/profile" className="nav-item nav-link pt-4" >
-            <img src='public/images/omlet-mascot.png' style={{ width: "42px", float: 'right', margin:'0 16px 8px 0' }}/>
+            <img src='public/images/omlet-mascot.png' style={{ width: "42px", float: 'right', margin:'0 16px 0px 0' }}/>
           </NavLink>
         </div>
       </div>
