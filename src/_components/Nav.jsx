@@ -6,10 +6,31 @@ import { Row, Col } from 'react-bootstrap';
 import { accountService } from '@/_services';
 
 const logo = {
-  margin: '30px 0 100px 5px'
+  margin: '30px 0 70px 5px'
+};
+const circle = {
+  margin: '0 auto',
+  height: '60px',
+  width: '60px',
+  borderRadius:'100%',
+  background:'white',
+  boxShadow: '0px 0px 5px rgba(0,0,0,0.6)',
+  // -moz-box-shadow: 10px -10px  rgba(0,0,0,0.6);
+  // -webkit-box-shadow: 10px -10px  rgba(0,0,0,0.6);
+  // -o-box-shadow: 10px -10px  rgba(0,0,0,0.6);
 };
 const navlinks = {
-  color: 'black'
+  color: 'black',
+  // textAlign:'center',
+  fontSize:'13px',
+};
+const navIcons = {
+  width: '42px', 
+  height:'auto',
+  margin:'15px 9px',
+};
+const navText = {
+  margin: '12px 0 0 0',
 };
 
 function Nav() {
@@ -26,7 +47,7 @@ function Nav() {
   return (
     <div>
       <nav className="navbar navbar-expand vertical-nav">
-        <Row style={{ height: "100%" }}>
+        <Row style={{ height: "100%", textAlign:'center' }}>
           <Col>
 
             <NavLink exact to="/" className="nav-item nav-link" style={logo}>
@@ -34,23 +55,31 @@ function Nav() {
             </NavLink>
 
             <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>
-              {/* <img src='public/images/dash_icon.svg'></img> */}
-                Dashboard
+              <div style={circle}>
+                <img src='public/images/dash_icon.svg' style={navIcons} ></img>
+              </div>
+              <p style={navText}>Dashboard</p>
             </NavLink>
 
             <NavLink exact to="/sets" className="nav-item nav-link" style={navlinks}>
-              {/* <img src='public/images/sets_icon.svg'></img> */}
-                Sets
+              <div style={circle}>
+                <img src='public/images/sets_icon.svg' style={navIcons} ></img>
+              </div>
+              <p style={navText}>Sets</p>
             </NavLink>
 
             <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks}>
-              {/* <img src='public/images/plan_icon.svg'></img> */}
-              Study Plan
+              <div style={circle}>
+                <img src='public/images/plan_icon.svg' style={{width: '30px', margin:'12px 10px',}} ></img>
+              </div>
+              <p style={navText}>Study Plan</p>
             </NavLink>
 
             <NavLink exact to="/metrics" className="nav-item nav-link" style={navlinks}>
-              {/* <img src='public/images/metric_icon.svg'></img> */}
-              Metrics
+              <div style={circle}>
+                <img src='public/images/metric_icon.svg' style={navIcons} ></img>
+              </div>
+              <p style={navText}>Metrics</p>
             </NavLink>
 
             <a onClick={accountService.logout} className="nav-item nav-link" >Logout</a>
@@ -71,9 +100,9 @@ function Nav() {
       </div>
 
       {/* {user.role === Role.Admin &&
-                <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
-            }
-            <Route path="/admin" component={AdminNav} /> */}
+            <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
+        }
+        <Route path="/admin" component={AdminNav} /> */}
     </div>
   );
 }
