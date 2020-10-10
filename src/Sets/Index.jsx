@@ -6,7 +6,7 @@ function Sets() {
   const user = accountService.userValue;
 
   const setContainer = {
-    marginLeft: '350px',
+    margin: '60px 0 0 350px',
     width: '972px',
     height: '100%',
     display: 'flex',
@@ -86,14 +86,14 @@ function Sets() {
 
   return (
     <div>
-      <Row>
+      {/* <Row>
         <Col></Col>
         <Col style={welcome}>
           Sets
           <hr style={border} />
         </Col>
       </Row>
-      <Col></Col>
+      <Col></Col> */}
 
       <div style={setContainer}>
         <div style={dottedBorder}>
