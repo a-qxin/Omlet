@@ -6,7 +6,7 @@ function Sets() {
   const user = accountService.userValue;
 
   const setContainer = {
-    margin: '60px 0 0 350px',
+    margin: '60px 0 0 276px',
     width: '972px',
     height: '100%',
     display: 'flex',

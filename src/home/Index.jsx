@@ -37,11 +37,11 @@ function Home() {
 
   const homeContainer = {
     height: '100%',
-    marginLeft: '360px',
+    marginLeft: '290px',
   };
   const border = {
     border: '1px solid #C4C4C4',
-    width: '77vw',
+    width: '90vw',
   };
 
   return (
@@ -51,7 +51,7 @@ function Home() {
         <h2>Welcome back <b>{user.firstName}</b></h2>
         <hr style={border} />
       </div>
-      
+
       {/* <Row>
         <Col>
         </Col>
