@@ -7,124 +7,107 @@ import { Container, Row, Col } from 'react-bootstrap';
 function Home() {
   const user = accountService.userValue;
 
-  // const welcome = {
-  //   fontSize: '2vw',
-  //   ///  paddingLeft: '50px',
-  //   /// paddingBottom: '50px'
-  // };
-  // const weekly = {
-  //   fontSize: '20px',
-  // };
-
-  
-
-  // const underline1 = {
-  //   width: '9vw',
-  // };
-
-  // const underline2 = {
-  //   width: '6vw',
-  //   marginLeft: '0',
-  // };
-
-  // const height = {
-  //   height: '100px',
-  // };
-
-  // const padding = {
-  //   paddingTop: '4vw',
-  // };
-
   const homeContainer = {
     height: '100%',
-    marginLeft: '290px',
+    margin: '0 40px 0 290px',
   };
   const border = {
     border: '1px solid #C4C4C4',
-    width: '90vw',
-    marginTop:'30px',
+    width: '100%',
+    marginTop: '30px',
+    marginRight: '36px',
   };
   const setTabs = {
-    display:'flex',
-    margin: '30px 36px 30px 0',
-    float:'right'
+    display: 'flex',
+    margin: '30px 0px 30px 0',
+    float: 'right'
   };
 
   return (
     <div>
-
       <div style={homeContainer}>
         <h2>Welcome back <b>{user.firstName}</b></h2>
         <hr style={border} />
 
-        <div>
+        <div style={{ display: 'flex'}}>
+
+          {/* stats */}
           <div>
-          {/* exp stuff */}
+            <div style={{ width: '100%', marginTop: '80px', marginRight:'20vw', display: 'flex' }}>
+              <div style={{ width: '100px', height: '100px', borderRadius: '100%', boxShadow: '0px 2px 8px #c4c4c4', }}>
+                <div style={{ width: '80px', height: '80px', margin: '10px', borderRadius: '100%', background: '#ffe566' }}>
+
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', height: '100%', margin: '40px 0 0 10px' }}>
+                <div style={{ margin: '10px 0 0 10px', }}>
+                  <p>Weekly Study Time: </p>
+                </div>
+                <div style={{ margin: '0px 0 0px 10px', }}>
+                  <h2><b>14 hours left</b></h2>
+                </div>
+              </div>
+            </div>
+
+            <div style={{display:'flex', height:'100%', margin:'50px 0 0 0'}}>
+              <div style={{ margin: '10px 0 0 10px', }}>
+                  <p>Weekly exp growth: </p>
+                </div>
+                <div style={{ margin: '0px 0 0px 10px', }}>
+                  <h2><b>1900pt</b></h2>
+                </div>
+            </div>
           </div>
 
-          <div style={setTabs}>
+          {/* sets */}
+          <div>
+            <div style={setTabs}>
+              <div style={{ marginRight: '150px' }}>
+                <a href='/'>Recently Studied</a>
+                <hr style={{ border: '1px solid black', width: '125px' }} />
+              </div>
 
-            <div style={{marginRight:'150px'}}>
-              <a href='/'>Recently Studied</a>
-              <hr style={{border:'1px solid black', width: '125px'}} />
+              <div>
+                <a href='/' style={{ textDecoration: 'none' }}>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <img src="https://img.icons8.com/android/24/000000/plus.png" />
+                  <b>&nbsp;&nbsp;&nbsp;Add Set</b>
+                </a>
+                <hr class='rainbow'></hr>
+              </div>
+            </div>
+
+            {/* setlist */}
+            <div>
+              <h4><b>Defence Against the Dark Arts</b></h4>
+              <p>DADA - 101</p>
+              <hr />
             </div>
 
             <div>
-              <a href='/' style={{textDecoration:'none'}}>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="https://img.icons8.com/android/24/000000/plus.png" />
-                <b>&nbsp;&nbsp;&nbsp;Add Set</b>
-              </a>
-              <hr class='rainbow'></hr>
+              <h4><b>Potions</b></h4>
+              <p>PTNS - 101</p>
+              <hr />
+            </div>
+
+            <div>
+              <h4><b>History of Magic</b></h4>
+              <p>HOM - 101</p>
+              <hr />
+            </div>
+
+            <div>
+              <h4><b>Transfiguration</b></h4>
+              <p>TNFG - 101</p>
+              <hr />
             </div>
 
           </div>
+          
         </div>
-        
-        
-        
 
       </div>
-
-      {/* <Row>
-        <Col>
-        </Col>
-        <Col style={welcome}>
-          <h2>Welcome back <b>{user.firstName}</b></h2>
-          <hr style={border} />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={8} />
-        <Row>
-          <Col >
-            <a href='/' >
-              Recently Studied
-              <hr style={underline1} />
-            </a>
-          </Col>
-        </Row>
-        <Col />
-        <Col>
-          <a href='/add_sets'>
-            <img src="https://img.icons8.com/android/24/000000/plus.png" />
-              <strong>&nbsp;&nbsp;&nbsp;Add Set</strong>
-              <hr style={underline2} />
-          </a>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={3} />
-        <Col style={weekly}>
-          Weekly Study Time: "A lot"
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={3} />
-        <Col style={padding}>
-          Weekly exp growth:
-        </Col>
-      </Row> */}
     </div>
 
   );
