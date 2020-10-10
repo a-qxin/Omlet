@@ -67,33 +67,8 @@ function Sets() {
     margin:'0px'
   };
 
-  // const welcome = {
-  //   fontSize: '2vw',
-  // };
-
-  // const weekly = {
-  //   fontSize: '20px',
-  // };
-
-  // const border = {
-  //   border: '1px solid #C4C4C4',
-  //   width: '77vw',
-  // };
-
-  // const recent = {
-  //   top: '10vw',
-  // };
-
   return (
     <div>
-      {/* <Row>
-        <Col></Col>
-        <Col style={welcome}>
-          Sets
-          <hr style={border} />
-        </Col>
-      </Row>
-      <Col></Col> */}
 
       <div style={setContainer}>
         <div style={dottedBorder}>
