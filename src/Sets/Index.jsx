@@ -3,47 +3,137 @@ import { accountService } from '@/_services';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 function Sets() {
-    const user = accountService.userValue;
-    
-    const welcome = {
-      fontSize: '2vw',
-      ///  paddingLeft: '50px',
-        /// paddingBottom: '50px'
-      }; 
-    const weekly = {
-      fontSize: '20px',
-      };
-    const border = {
-        border: '1px solid #C4C4C4',
-        width: '77vw',
-  
-      };
-      
-    const recent = {
-      top: '10vw',
-      };
-   
-    return (
-      <div>
-        <Row>
-          <Col></Col>
-          <Col style={welcome}>
-            Sets
-            <hr style={border} />
-          </Col>
-        </Row>
-        {/* <Row>
-          <Col></Col>
-          <Row></Row>
-          <Row>
-            <Col></Col>
-          </Row>
-          <Col></Col>
-          <Col></Col>
-        </Row> */}
+  const user = accountService.userValue;
+
+  const setContainer = {
+    margin: '60px 0 0 350px',
+    width: '972px',
+    height: '100%',
+    display: 'flex',
+    flexWrap: 'wrap'
+  };
+
+  const set = {
+    width: '300px',
+    height: '200px',
+    borderRadius:'20px',
+    margin: '12px',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, .25)',
+    background: '#ffffff',
+    display:'flex'
+  };
+
+  const dottedBorder = {
+    width: '300px',
+    height: '200px',    
+    borderRadius: '20px',
+    margin: '12px',
+    border: '1.5px dashed #000000',
+  };
+
+  const setAccent = {
+    width: '18px',
+    borderRadius:'20px 0 0 20px',
+    height: '100%',
+    background: '#2ee340'
+  };
+
+  const setContents = {
+    margin: '30px 30px',
+  };
+
+  const setTitle = {
+    fontWeight: '600',
+    fontSize: '26px',
+    lineHeight: '30px',
+    marginBottom:'8px'
+
+  };
+
+  const courseCode = {
+    fontSize:'14px',
+    lineHeight:'14px',
+    margin:'0px'
+  };
+
+  const setHr = {
+    border: '1px solid #c4c4c4',
+    margin: '8px 0px'
+  };
+
+  const numTerms = {
+    fontSize:'14px',
+    lineHeight:'14px',
+    margin:'0px'
+  };
+
+  const welcome = {
+    fontSize: '2vw',
+  };
+
+  // const weekly = {
+  //   fontSize: '20px',
+  // };
+
+  const border = {
+    border: '1px solid #C4C4C4',
+    width: '77vw',
+  };
+
+  // const recent = {
+  //   top: '10vw',
+  // };
+
+  return (
+    <div>
+      {/* <Row>
+        <Col></Col>
+        <Col style={welcome}>
+          Sets
+          <hr style={border} />
+        </Col>
+      </Row>
+      <Col></Col> */}
+
+      <div style={setContainer}>
+        <div style={dottedBorder}>
+          <div className="text" style={{ textAlign: 'center', margin: 'auto', padding: '80px 0' }}>
+            <p>+ &nbsp;&nbsp;&nbsp; New Set</p>
+            <div style={{ marginTop: '-10px' }}>
+              <hr className='rainbow' ></hr>
+            </div>
+          </div>
+        </div>
+
+        <div style={set}>
+          <div style={setAccent}></div>
+          <div style={setContents}>
+            <div>
+              <p style={setTitle}>Defence Against the Dark Arts</p>
+              <p style={courseCode}>DADA - 101</p>
+              <hr style={setHr} />
+              <p style={numTerms}>5 Terms</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div style={set}>
+        </div>
+        <div style={set}>
+        </div>
+        <div style={set}>
+        </div>
+        <div style={set}>
+        </div><div style={set}>
+        </div><div style={set}>
+        </div><div style={set}>
+        </div>
+
       </div>
 
-    );
+    </div>
+  );
 }
 
 export { Sets };

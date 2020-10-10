@@ -15,6 +15,12 @@ function Login({ history, location }) {
         password: ''
     };
 
+    const fieldWidth = {
+        width: '400px',
+        padding:'8px 0 10px 0',
+
+    }
+
     const validationSchema = Yup.object().shape({
         email: Yup.string()
             .email('Email is invalid')
@@ -45,20 +51,37 @@ function Login({ history, location }) {
                     
                     <div>
                         <div className="form-group" style={centerText}>
-                            <Field placeholder="Email" name="email" type="text" className={ (errors.email && touched.email ? ' is-invalid' : '')}/>
+                            <Field 
+                                placeholder="Email" 
+                                name="email" 
+                                type="text" 
+                                style={fieldWidth} 
+                                className={ (errors.email && touched.email ? ' is-invalid' : '')}
+                            />
                             <ErrorMessage name="email" component="div" className="invalid-feedback" />
                         </div>
 
                         <div className="form-group" style={centerText}>
-                            <Field placeholder="Password" name="password" type="password" className={ (errors.password && touched.password ? ' is-invalid' : '')} />
+                            <Field 
+                                placeholder="Password" 
+                                name="password" 
+                                type="password" 
+                                style={fieldWidth} 
+                                className={ (errors.password && touched.password ? ' is-invalid' : '')} 
+                            />
                             <ErrorMessage name="password" component="div" className="invalid-feedback" />
                         </div>
 
-                        <div className='form-group' style={centerText}>
-                            <button id="yellowButton" type="submit" disabled={isSubmitting} className="btn">
-                                {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
-                                    Login
-                                </button>
+                        <div className='form-group' style={{paddingTop:'30px', textAlign:'center'}}>
+                            <button 
+                                id="yellowButton" 
+                                type="submit" 
+                                disabled={isSubmitting} 
+                                className="btn"
+                            >
+                                {isSubmitting && <span className="spinner-border spinner-border-sm mr-1" />}
+                                Login
+                            </button>
                         </div>
 
                         <div className="form-row">

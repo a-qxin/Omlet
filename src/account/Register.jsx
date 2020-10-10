@@ -6,6 +6,14 @@ import * as Yup from 'yup';
 import { accountService, alertService } from '@/_services';
 
 function Register({ history }) {
+    const centerText = {
+        textAlign:'center',
+    };
+    const fieldWidth = {
+        width: '400px',
+        padding:'10px 0 10px 0',
+    }
+    
     const regButton = {
         backgroundColor: '#ffe566 !important',
         color: '#ffe566 !important',
@@ -15,7 +23,7 @@ function Register({ history }) {
     const initialValues = {
         title: '',
         firstName: '',
-        lastName: '',
+        // lastName: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -26,9 +34,9 @@ function Register({ history }) {
         // title: Yup.string()
         //     .required('Title is required'),
         firstName: Yup.string()
-            .required('First Name is required'),
-        lastName: Yup.string()
-            .required('Last Name is required'),
+            .required('Username is required'),
+        // lastName: Yup.string()
+        //     .required('Last Name is required'),
         email: Yup.string()
             .email('Email is invalid')
             .required('Email is required'),
@@ -60,58 +68,70 @@ function Register({ history }) {
             {({ errors, touched, isSubmitting }) => (
                 <Form>
                     <h3 style={{textAlign:'center', letterSpacing:'0.06em'}}><b>Create Profile</b></h3>
-                    <div className="card-body">
-                        {/* <div className="form-row"> */}
-                            {/* <div className="form-group col">
-                                <label>Title</label>
-                                <Field name="title" as="select" className={'form-control' + (errors.title && touched.title ? ' is-invalid' : '')}>
-                                    <option value=""></option>
-                                    <option value="Mr">Mr</option>
-                                    <option value="Mrs">Mrs</option>
-                                    <option value="Miss">Miss</option>
-                                    <option value="Ms">Ms</option>
-                                </Field>
-                                <ErrorMessage name="title" component="div" className="invalid-feedback" />
-                            </div> */}
-                            <div className="form-group">
-                                {/* <label>First Name</label> */}
-                                <Field placeholder="First Name" name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />
-                                <ErrorMessage name="firstName" component="div" className="invalid-feedback" />
-                            </div>
-                        {/* </div> */}
+                    <div className="card-body" style={centerText}>
                         <div className="form-group">
-                                {/* <label>Last Name</label> */}
-                                <Field placeholder="Last Name" name="lastName" type="text" className={'form-control' + (errors.lastName && touched.lastName ? ' is-invalid' : '')} />
-                                <ErrorMessage name="lastName" component="div" className="invalid-feedback" />
-                            </div>
+                            <Field 
+                                placeholder="Username" 
+                                name="firstName" 
+                                type="text" 
+                                style={fieldWidth} 
+                                className={(errors.firstName && touched.firstName ? ' is-invalid' : '')} 
+                            />
+                            <ErrorMessage name="firstName" component="div" className="invalid-feedback" />
+                        </div>
                         <div className="form-group">
-                            {/* <label>Email</label> */}
-                            <Field placeholder="Email" name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
+                            <Field 
+                                placeholder="Email" 
+                                name="email" 
+                                type="text" 
+                                style={fieldWidth} 
+                                className={(errors.email && touched.email ? ' is-invalid' : '')} 
+                            />
                             <ErrorMessage name="email" component="div" className="invalid-feedback" />
                         </div>
-                        {/* <div className="form-row"> */}
-                            <div className="form-group">
-                                {/* <label>Password</label> */}
-                                <Field placeholder="Password" name="password" type="password" className={'form-control' + (errors.password && touched.password ? ' is-invalid' : '')} />
-                                <ErrorMessage name="password" component="div" className="invalid-feedback" />
-                            </div>
-                            <div className="form-group">
-                                {/* <label>Confirm Password</label> */}
-                                <Field placeholder="Confirm Password" name="confirmPassword" type="password" className={'form-control' + (errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} />
-                                <ErrorMessage name="confirmPassword" component="div" className="invalid-feedback" />
-                            </div>
-                        {/* </div> */}
-                        <div className="form-group form-check">
-                            <Field type="checkbox" name="acceptTerms" id="acceptTerms" className={'form-check-input ' + (errors.acceptTerms && touched.acceptTerms ? ' is-invalid' : '')} />
+                        <div className="form-group">
+                            <Field 
+                                placeholder="Password" 
+                                name="password" 
+                                type="password" 
+                                style={fieldWidth} 
+                                className={(errors.password && touched.password ? ' is-invalid' : '')} 
+                            />
+                            <ErrorMessage name="password" component="div" className="invalid-feedback" />
+                        </div>
+                        <div className="form-group">
+                            <Field 
+                                placeholder="Confirm Password" 
+                                name="confirmPassword" 
+                                type="password" 
+                                style={fieldWidth} 
+                                className={(errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} 
+                            />
+                            <ErrorMessage name="confirmPassword" component="div" className="invalid-feedback" />
+                        </div>
+                        <div className="form-group form-check" style={{margin: '20px 0 0 -170px', color: '#a3a3a3'}}>
+                            <Field 
+                                type="checkbox" 
+                                name="acceptTerms" 
+                                id="acceptTerms" 
+                                className={'form-check-input ' + (errors.acceptTerms && touched.acceptTerms ? ' is-invalid' : '')} 
+                            />
                             <label htmlFor="acceptTerms" className="form-check-label">Accept Terms & Conditions</label>
                             <ErrorMessage name="acceptTerms" component="div" className="invalid-feedback" />
                         </div>
-                        <div className="form-group">
-                            <button id="yellowButton" type="submit" disabled={isSubmitting}>
-                                {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
+                        <div className="form-group" style={{paddingTop: '30px'}}>
+                            <button 
+                                id="yellowButton" 
+                                type="submit" 
+                                disabled={isSubmitting}
+                                style={{marginRight:'10px'}}
+                            >
+                                {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"/>}
                                 Register
                             </button>
-                            <Link to="login" className="btn btn-link">Cancel</Link>
+                            <Link id="yellowBorderButton" to="login" style={{marginLeft: '10px'}} className="btn btn-link">
+                                Cancel
+                            </Link>
                         </div>
                     </div>
                 </Form>
