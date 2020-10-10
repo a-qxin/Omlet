@@ -67,18 +67,18 @@ function Sets() {
     margin:'0px'
   };
 
-  const welcome = {
-    fontSize: '2vw',
-  };
+  // const welcome = {
+  //   fontSize: '2vw',
+  // };
 
   // const weekly = {
   //   fontSize: '20px',
   // };
 
-  const border = {
-    border: '1px solid #C4C4C4',
-    width: '77vw',
-  };
+  // const border = {
+  //   border: '1px solid #C4C4C4',
+  //   width: '77vw',
+  // };
 
   // const recent = {
   //   top: '10vw',
