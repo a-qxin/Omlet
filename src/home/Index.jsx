@@ -7,42 +7,52 @@ import { Container, Row, Col } from 'react-bootstrap';
 function Home() {
   const user = accountService.userValue;
 
-  const welcome = {
-    fontSize: '2vw',
-    ///  paddingLeft: '50px',
-    /// paddingBottom: '50px'
-  };
-  const weekly = {
-    fontSize: '20px',
-  };
+  // const welcome = {
+  //   fontSize: '2vw',
+  //   ///  paddingLeft: '50px',
+  //   /// paddingBottom: '50px'
+  // };
+  // const weekly = {
+  //   fontSize: '20px',
+  // };
 
+  
+
+  // const underline1 = {
+  //   width: '9vw',
+  // };
+
+  // const underline2 = {
+  //   width: '6vw',
+  //   marginLeft: '0',
+  // };
+
+  // const height = {
+  //   height: '100px',
+  // };
+
+  // const padding = {
+  //   paddingTop: '4vw',
+  // };
+
+  const homeContainer = {
+    height: '100%',
+    marginLeft: '360px',
+  };
   const border = {
     border: '1px solid #C4C4C4',
     width: '77vw',
-
   };
 
-  const underline1 = {
-    width: '9vw',
-  };
-
-  const underline2 = {
-    width: '6vw',
-    marginLeft: '0',
-  };
-
-  const height = {
-    height: '100px',
-  };
-
-  const padding = {
-    paddingTop: '4vw',
-  };
-
-  /// Code returned when user reaches home page
   return (
     <div>
-      <Row>
+
+      <div style={homeContainer}>
+        <h2>Welcome back <b>{user.firstName}</b></h2>
+        <hr style={border} />
+      </div>
+      
+      {/* <Row>
         <Col>
         </Col>
         <Col style={welcome}>
@@ -56,7 +66,7 @@ function Home() {
           <Col >
             <a href='/' >
               Recently Studied
-                <hr style={underline1} />
+              <hr style={underline1} />
             </a>
           </Col>
         </Row>
@@ -64,8 +74,8 @@ function Home() {
         <Col>
           <a href='/add_sets'>
             <img src="https://img.icons8.com/android/24/000000/plus.png" />
-              Add Set
-                <hr style={underline2} />
+              <strong>&nbsp;&nbsp;&nbsp;Add Set</strong>
+              <hr style={underline2} />
           </a>
         </Col>
       </Row>
@@ -73,14 +83,14 @@ function Home() {
         <Col sm={3} />
         <Col style={weekly}>
           Weekly Study Time: "A lot"
-                </Col>
+        </Col>
       </Row>
       <Row>
         <Col sm={3} />
         <Col style={padding}>
           Weekly exp growth:
-                </Col>
-      </Row>
+        </Col>
+      </Row> */}
     </div>
 
   );
