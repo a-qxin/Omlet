@@ -40,12 +40,11 @@ function Nav() {
     return subscription.unsubscribe;
   }, []);
 
-  // only show nav when logged in
   if (!user) return null;
 
   return (
     <div>
-      <nav className="navbar navbar-expand vertical-nav">
+      <nav className="navbar navbar-expand vertical-nav" >
         <Row style={{ height: "100%", textAlign:'center' }}>
           <Col>
 

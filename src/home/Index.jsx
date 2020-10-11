@@ -42,7 +42,7 @@ function Home() {
 
               <div style={{ display: 'flex', height: '100%', margin: '40px 0 0 10px' }}>
                 <div style={{ margin: '10px 0 0 10px', }}>
-                  <p>Weekly Study Time: </p>
+                  <p style={{color:'#717171'}}>Weekly Study Time: </p>
                 </div>
                 <div style={{ margin: '0px 0 0px 10px', }}>
                   <h2><b>14 hours left</b></h2>
@@ -52,7 +52,7 @@ function Home() {
 
             <div style={{display:'flex', height:'100%', margin:'50px 0 0 0'}}>
               <div style={{ margin: '10px 0 0 10px', }}>
-                  <p>Weekly exp growth: </p>
+                  <p style={{color:'#717171'}}>Weekly exp growth: </p>
                 </div>
                 <div style={{ margin: '0px 0 0px 10px', }}>
                   <h2><b>1900pt</b></h2>
