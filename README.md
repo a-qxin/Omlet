@@ -81,7 +81,7 @@ npm start
 * [Jason Watmore](https://jasonwatmore.com)'s tutorials
 
 [contributors-shield]: https://img.shields.io/github/contributors/a-qxin/omelette.svg?style=flat-square
-[contributors-url]: https://github.com/infinite-options/swag-marketplace/graphs/contributors
+[contributors-url]: https://github.com/a-qxin/omelette/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/a-qxin/omelette
 [forks-url]: https://github.com/a-qxin/omelette/network/members
 [stars-shield]: https://img.shields.io/github/stars/a-qxin/omelette
