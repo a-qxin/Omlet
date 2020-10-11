@@ -1,6 +1,7 @@
 import React from 'react';
 import { accountService } from '@/_services';
 // import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+// TODO: convert set to separate component
 
 function Sets() {
   const user = accountService.userValue;
@@ -98,9 +99,9 @@ function Sets() {
       <div style={setContainer}>
         <div style={dottedBorder}>
           <div className="text" style={{ textAlign: 'center', margin: 'auto', padding: '80px 0' }}>
-            <p>+ &nbsp;&nbsp;&nbsp; New Set</p>
+            <a style={{textDecoration:'none'}} href="/add_sets">+ &nbsp;&nbsp;&nbsp; New Set</a>
             <div style={{ marginTop: '-10px' }}>
-              <hr className='rainbow' ></hr>
+              <hr className='rainbow' />
             </div>
           </div>
         </div>
