@@ -12,27 +12,57 @@ function Study_Plan() {
 
   const setTabs = {
     display: 'flex',
-    margin: '30px 0px 30px 0',
     float: 'right'
   };
 
-  const testName = {
-    margin:'0'
+  const accentGreen = {
+    width: '3px',
+    height:'auto',
+    margin: '5px 10px 10px 0px',
+    background: '#2ee340'
+  };
+  const accentRed = {
+    width: '3px',
+    height:'auto',
+    margin: '5px 10px 10px 0px',
+    background: '#ff6767'
+  };
+  const accentBlue = {
+    width: '3px',
+    height:'auto',
+    margin: '5px 10px 10px 0px',
+    background: '#00cabe'
+  };
+  const accentPurple = {
+    width: '3px',
+    height:'auto',
+    margin: '5px 10px 10px 0px',
+    background: '#B073ff'
+  };
+
+  const testSpacing = {
+    margin:'2px 0'
+  };
+  const testHr = {
+    margin:'2px 0 4px',
   }
 
   return (
     <div>
         
-
       <div style={container}>
         <div style={{display:'flex',}}>
           <div style={{display:'flex', float:'left'}}>
-            <img src='public/images/less.png' style={{height:'20px', width:'auto', margin:'20px 10px 0 0'}}/>
+            <a href='/'>
+              <img src='public/images/less.png' style={{height:'20px', width:'auto', margin:'20px 10px 0 0'}}/>
+            </a>
             &nbsp;&nbsp;
             <h1 style={{fontSize:'55px'}}><b>July</b></h1>
             <h3 style={{marginTop:'24px'}}>&nbsp;2020</h3>
             &nbsp;&nbsp;&nbsp;
-            <img src='public/images/greater.png' style={{height:'20px', width:'auto', margin:'20px 10px 0 0'}}/>
+            <a href='/'>
+              <img src='public/images/greater.png' style={{height:'20px', width:'auto', margin:'20px 10px 0 0'}}/>
+            </a>
           </div>
 
           <div style={{margin:'30px 0 0 250px'}}>
@@ -59,7 +89,7 @@ function Study_Plan() {
           <div>
             <div style={setTabs}>
               <div style={{ marginRight: '100px' }}>
-                <a href='/' style={{marginLeft:'23px'}}>Upcoming</a>
+                <a href='/' style={{marginLeft:'23px', textDecoration:'none'}}>Upcoming</a>
                 <hr style={{ border: '1px solid black', width: '125px' }} />
               </div>
 
@@ -73,74 +103,56 @@ function Study_Plan() {
               </div>
             </div>
 
-            {/* setlist */}
+            {/* test list */}
             <div>
-              <h4><b>Defence Against the Dark Arts</b></h4>
-              <p style={testName}>Exam 1</p>
-              <p>10/10/20</p>
-              <hr />
-            </div>
+              
+              <div style={{display:'flex', width: '100%'}}>
+                <div style={accentGreen}></div>
+                <div style={{marginTop:'10px'}}>
+                  <h4 style={testSpacing}><b>DADA - 101</b></h4>
+                  <p style={testSpacing}>Exam 1</p>
+                  <p>10/10/20</p>
+                </div>
+              </div>
+              <hr style={testHr}/>
 
-            <div>
-              <h4><b>Potions</b></h4>
-              <p style={testName}>Quiz 2</p>
-              <p>10/31/20</p>
-              <hr />
-            </div>
+              <div style={{display:'flex', width: '100%'}}>
+                <div style={accentPurple}></div>
+                <div style={{marginTop:'10px'}}>
+                  <h4 style={testSpacing}><b>PTNS - 101</b></h4>
+                  <p style={testSpacing}>Exam 1</p>
+                  <p>10/31/20</p>
+                </div>
+              </div>
+              <hr style={testHr}/>
 
-            <div>
-              <h4><b>History of Magic</b></h4>
-              <p style={testName}>Quiz 3</p>
-              <p>11/02/20</p>
-              <hr />
-            </div>
+              <div style={{display:'flex', width: '100%'}}>
+                <div style={accentBlue}></div>
+                <div style={{marginTop:'10px'}}>
+                  <h4 style={testSpacing}><b>HOM - 101</b></h4>
+                  <p style={testSpacing}>Exam 1</p>
+                  <p>11/02/20</p>
+                </div>
+              </div>
+              <hr style={testHr}/>
 
-            <div>
-              <h4><b>Transfiguration</b></h4>
-              <p style={testName}>Exam 2</p>
-              <p>11/20/20</p>
-              <hr />
-            </div>
+              <div style={{display:'flex', width: '100%'}}>
+                <div style={accentRed}></div>
+                <div style={{marginTop:'10px'}}>
+                  <h4 style={testSpacing}><b>TNFG - 101</b></h4>
+                  <p style={testSpacing}>Exam 1</p>
+                  <p>11/13/20</p>
+                </div>
+              </div>
+              <hr style={testHr}/>
 
+            </div>
+            
           </div>
-
         </div>
 
       </div>
-
-      {/* <Row>
-                <Col>
-                </Col>
-                 <Col style={welcome}>
-                    Welcome back <b>{user.firstName}</b>                              
-                    <hr style={border} />
-                  </Col>
-                </Row>
-              <Row>
-              <Col sm={8} />
-              <Row>
-              <Col > 
-              <a href='/' >
-                Upcoming
-                <hr style={underline1}/>
-              </a>
-              </Col>
-              </Row>
-              <Col />
-              <Col>
-              <a href='/'>
-              <img src="https://img.icons8.com/android/24/000000/plus.png"/>
-               New Test
-                <hr style={underline2}/>
-              </a>
-              </Col>
-              </Row> */}
-
-
-
-
     </div>
-
   );
 }
 
