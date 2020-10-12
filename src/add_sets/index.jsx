@@ -5,55 +5,60 @@ import Select from 'react-select';
 import { Link } from 'react-router-dom';
 import { IncorporationForm, Card_Form } from './Card_Form'
 
-function Add_Sets() {
-    const user = accountService.userValue;
+// use sortable.js for cards
 
-    const tests = [
-      { value : 'Biology', label: 'biology'},
-      { value : 'math', label: 'math'},
-    ];
-    
-    return (
-        <div>
-              <Row style={{marginBottom: '5rem'}}>
-                <Col md={3}/>
-                 <Col>
-                 <form class="form-inline">
-                    <div class="form-group">
-                        <input placeholder="Set Name"
-                            type="text" style={{outline: '0'}} />
-                    </div>        
-                  </form>
-                  </Col>
-                  <Col>
-                  </Col>
-                  <Col md={2}>
-                  <Select 
-                    options={tests}
-                    className="mb-3"
-                    placeholder="Select test"
-                    isSearchable
-                      />
-                  </Col>
-                  <Col md={1}/>
-                </Row>
-                <Row style={{marginBottom: '5rem'}}>
-                  <Col md={{ span: 2, offset: 3 }}>
-                    <Link style={{color: 'black'}}>Base</Link>
-                  </Col>
-                  <Col md={{ span: 2 }}>
-                    <Link style={{color: 'black'}}># of terms 1st level</Link>
-                  </Col>
-                  <Col md={{ span: 2 }}>
-                    <Link style={{color: 'black'}}># of terms 2nd level</Link>
-                  </Col>
-                </Row>
-              <Row>
-              <Col md={{ span: 3, offset: 3 }}>
-              <Card_Form />
-              </Col>
-              <Col>
-             {/* Bad attempt at adding hoverable cards with cardeck
+function Add_Sets() {
+  const user = accountService.userValue;
+
+  const tests = [
+    { value: 'Biology', label: 'biology' },
+    { value: 'math', label: 'math' },
+  ];
+
+  return (
+    <div>
+
+      
+
+      <Row style={{ marginBottom: '5rem' }}>
+        <Col md={3} />
+        <Col>
+          <form class="form-inline">
+            <div class="form-group">
+              <input placeholder="Set Name"
+                type="text" style={{ outline: '0' }} />
+            </div>
+          </form>
+        </Col>
+        <Col>
+        </Col>
+        <Col md={2}>
+          <Select
+            options={tests}
+            className="mb-3"
+            placeholder="Select test"
+            isSearchable
+          />
+        </Col>
+        <Col md={1} />
+      </Row>
+      <Row style={{ marginBottom: '5rem' }}>
+        <Col md={{ span: 2, offset: 3 }}>
+          <Link style={{ color: 'black' }}>Base</Link>
+        </Col>
+        <Col md={{ span: 2 }}>
+          <Link style={{ color: 'black' }}># of terms 1st level</Link>
+        </Col>
+        <Col md={{ span: 2 }}>
+          <Link style={{ color: 'black' }}># of terms 2nd level</Link>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 3, offset: 3 }}>
+          <Card_Form />
+        </Col>
+        <Col>
+          {/* Bad attempt at adding hoverable cards with cardeck
              
              <CardDeck style={{ width: '10rem' }}>
               <Card>
@@ -69,11 +74,11 @@ function Add_Sets() {
                 
               </Card>
     </CardDeck> */}
-              </Col>
-              </Row>
-        </div>
+        </Col>
+      </Row>
+    </div>
 
-    );
+  );
 }
 
 export { Add_Sets };
