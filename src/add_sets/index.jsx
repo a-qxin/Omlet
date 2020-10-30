@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { accountService } from '@/_services';
-import { Container, Row, Col, Card, CardGroup, CardDeck, onSubmit, handleSubmit, Button } from 'react-bootstrap';
+// import { Container, Row, Col, Card, CardGroup, CardDeck, onSubmit, handleSubmit, Button } from 'react-bootstrap';
 import Select from 'react-select';
 import { Link } from 'react-router-dom';
-import { IncorporationForm, Card_Form } from './Card_Form'
+import { Card_Form } from './Card_Form'
 
 // use sortable.js for cards
 

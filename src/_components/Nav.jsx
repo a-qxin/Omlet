@@ -29,7 +29,7 @@ const navIcons = {
   margin:'15px 9px',
 };
 const navText = {
-  margin: '12px 0 0 0',
+  margin: '12px 0 2px 0',
 };
 
 function Nav() {
@@ -80,7 +80,11 @@ function Nav() {
               <p style={navText}>Metrics</p>
             </NavLink>
 
-            <a onClick={accountService.logout} className="nav-item nav-link" style={{position:'absolute', bottom:'0', marginLeft:'20px', fontSize: '14px'}} >Logout</a>
+            <div style={{height: '30px'}}>
+              <a onClick={accountService.logout} className="nav-item nav-link" style={{position:'absolute', bottom:'0', margin:'30px 0 0 20px', fontSize: '14px'}} >Logout</a>
+            </div>
+
+            
 
           </Col>
         </Row>
