@@ -51,69 +51,12 @@ function Add_Sets() {
 
       <div style={{ display: 'flex', margin: '80px 0' }}>
         <Link style={levelLink}>Base</Link>
-        <Link style={levelLink}># of terms 1st level</Link>
-        <Link style={levelLink}># of terms 2nd level</Link>
+        <Link style={levelLink}># terms</Link>
+        <Link style={levelLink}># terms</Link>
       </div>
 
       <Card_Form />
 
-
-      {/* <Row style={{ marginBottom: '5rem' }}> */}
-        {/* <Col md={3} /> */}
-        {/* <Col> */}
-          {/* <form class="form-inline">
-            <div class="form-group">
-              <input placeholder="Set Name"
-                type="text" style={{ outline: '0' }} />
-            </div>
-          </form> */}
-        {/* </Col> */}
-        {/* <Col> */}
-        {/* </Col> */}
-        {/* <Col md={2}> */}
-          {/* <Select
-            options={tests}
-            className="mb-3"
-            placeholder="Select test"
-            isSearchable
-          /> */}
-        {/* </Col> */}
-        {/* <Col md={1} /> */}
-      {/* </Row> */}
-      {/* <Row style={{ marginBottom: '5rem' }}>
-        <Col md={{ span: 2, offset: 3 }}>
-          <Link style={{ color: 'black' }}>Base</Link>
-        </Col>
-        <Col md={{ span: 2 }}>
-          <Link style={{ color: 'black' }}># of terms 1st level</Link>
-        </Col>
-        <Col md={{ span: 2 }}>
-          <Link style={{ color: 'black' }}># of terms 2nd level</Link>
-        </Col>
-      </Row> */}
-      {/* <Row>
-        <Col md={{ span: 3, offset: 3 }}>
-          <Card_Form />
-        </Col>
-        <Col> */}
-          {/* Bad attempt at adding hoverable cards with cardeck
-             
-             <CardDeck style={{ width: '10rem' }}>
-              <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This 
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-              <Card>
-                
-              </Card>
-    </CardDeck> */}
-        {/* </Col>
-      </Row> */}
     </div>
 
   );

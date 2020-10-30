@@ -84,8 +84,6 @@ function Nav() {
               <a onClick={accountService.logout} className="nav-item nav-link" style={{position:'absolute', bottom:'0', margin:'30px 0 0 20px', fontSize: '14px'}} >Logout</a>
             </div>
 
-            
-
           </Col>
         </Row>
       </nav>
