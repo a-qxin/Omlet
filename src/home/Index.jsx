@@ -69,7 +69,7 @@ function Home() {
               </div>
 
               <div>
-                <a href='/' style={{ textDecoration: 'none' }}>
+                <a href='/add_sets' style={{ textDecoration: 'none' }}>
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <img src="https://img.icons8.com/android/24/000000/plus.png" />
                   <b>&nbsp;&nbsp;&nbsp;Add Set</b>
