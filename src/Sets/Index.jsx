@@ -39,11 +39,11 @@ function Sets() {
 
         {/* user's sets to map */}
         <Set/>
+        {/* <Set/>
         <Set/>
         <Set/>
         <Set/>
-        <Set/>
-        <Set/>
+        <Set/> */}
 
       </div>
 

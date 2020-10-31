@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Container, Row, Col, Card, CardGroup, CardDeck, onSubmit, handleSubmit, Button } from 'react-bootstrap';
-
-
 import "./styles.css";
+
+// import nextLevel from "../../public/images/nextlevel-icon.svg";
+// import rearrange from "../../public/images/rearrange-icon.svg";
+// import save from "../../public/images/save-icon.svg";
+// import trash from "../../public/images/trash-icon.svg";
+// import union from "../../public/images/union-icon.svg";
+// import branch from "../../public/images/newbranch-icon.svg"
 
 {/* Whenever I try to style the trash can to move it as shown the button functionality no longer works float: 'right' , Also use this.handleNameChange for set name ex: <input
           type="text"
@@ -12,6 +17,7 @@ import "./styles.css";
           onChange={this.handleNameChange}
         />*/ }
 class Card_Form extends React.Component {
+
   constructor() {
     super();
     this.state = {
@@ -51,45 +57,91 @@ class Card_Form extends React.Component {
   };
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <Card>
-                <Card.Body>
-                  <Card.Title></Card.Title>
-                  <Card.Text>
-                  {this.state.Flashcard.map((Cards, idx) => (
-          <div className="Cards">
-            <input
-              type="text"
-              placeholder={`Term #${idx + 1}`}
-              value={Cards.name}
-              onChange={this.handleCardsNameChange(idx)}
-            />
-             <input
-              type="text"
-              placeholder={`Definition #${idx + 1}`}
-              value={Cards.name}
-              onChange={this.handleCardsNameChange(idx)}
-            />
-                  <Button variant="link" style={{float: "right"}}><img src="https://img.icons8.com/windows/32/000000/play.png"/></Button>
-                  <Button variant="link" style={{float: "right"}}><img src="https://img.icons8.com/small/16/000000/delete.png" onClick={this.handleRemoveCards(idx)}/></Button>
-                  <Button variant="link" style={{float: "right"}}><img src="https://img.icons8.com/small/16/000000/resize-vertical.png"/></Button>
-            
-                  </div>
-        ))}
-                  </Card.Text>
-                </Card.Body>
-        </Card>
+    const iconContainer = { boxShadow: '2px 2px 5px #BEBEBE', padding: '8px', borderRadius: '100%', margin: '0 20px' };
+    const icon = { height: '36px', margin: '5px' };
+    const smallIcon = { height: '20px', margin: '5px' };
 
-        <h4>Flashcard</h4>
-        <button
-          type="button"
-          onClick={this.handleAddCards}
-          className="small"
+    return (
+      <form onSubmit={this.handleSubmit} style={{ display: 'flex', alignItems: 'flex-end' }}>
+        <div style={iconContainer}>
+          <a
+            // type="button"
+            onClick={this.handleAddCards}
+            className="small"
+          >
+            <img src="../../public/images/union-icon.svg" style={icon}></img>
+          </a>
+        </div>
+
+        <div
+        // style={{ width: '100%', boxShadow: '1px 1px 10px #d3d3d3', borderRadius:'8px' }}
         >
-          Add Cards
-        </button>
-        <button>Incorporate</button>
+          <div>
+            {this.state.Flashcard.map((Cards, idx) => (
+              <div className="Cards" style={{ display: 'flex', justifyContent: 'space-evenly', padding: '30px', margin: '0 10px', boxShadow: '1px 1px 10px #d3d3d3', borderRadius: '8px' }}>
+
+                <input
+                  type="text"
+                  placeholder={`Term #${idx + 1}`}
+                  value={Cards.name}
+                  onChange={this.handleCardsNameChange(idx)}
+                  style={{ marginRight: '20px', minWidth: '250px', }}
+                />
+
+                <input
+                  type="text"
+                  placeholder={`Definition #${idx + 1}`}
+                  value={Cards.name}
+                  onChange={this.handleCardsNameChange(idx)}
+                  style={{ minWidth: '300px' }}
+                />
+
+                {/* <div>
+                  <p>#</p>
+                </div> */}
+                <div>
+                  <div style={{ textAlign: 'center', marginBottom: '10px', paddingRight:'10px' }}>
+                    <img src="../../public/images/placeholder.png" style={{ width: '55px' }}></img>
+                  </div>
+
+                  <div style={{ display:'flex', textAlign: 'center' }}>
+                    <div style={{textAlign:'center'}}>
+                      <Button variant="link" >
+                        <img src="../../public/images/rearrange-icon.svg" style={smallIcon} />
+                      </Button>
+                    </div>
+
+                    <div style={{textAlign:'center'}}>
+                      <Button variant="link" >
+                        <img src="../../public/images/trash-icon.svg" style={smallIcon} onClick={this.handleRemoveCards(idx)} />
+                      </Button>
+                    </div>
+
+                    <div style={{textAlign:'center'}}>
+                      <Button variant="link" >
+                        <img src="../../public/images/newbranch-icon.svg" style={smallIcon} />
+                      </Button>
+                    </div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={iconContainer}>
+          <a
+            // type="button"
+            // onClick={this.handleAddCards}
+            className="small"
+          >
+            <img src="../../public/images/save-icon.svg" style={icon}></img>
+          </a>
+        </div>
       </form>
     );
   }
