@@ -57,7 +57,7 @@ class Card_Form extends React.Component {
   };
 
   render() {
-    const iconContainer = { boxShadow: '2px 2px 5px #BEBEBE', padding: '8px', borderRadius: '100%', margin: '0 20px' };
+    const iconContainer = { boxShadow: '2px 2px 5px #BEBEBE', padding: '8px', borderRadius: '100%', margin: '0 20px 20px 20px' };
     const icon = { height: '36px', margin: '5px' };
     const smallIcon = { height: '20px', margin: '5px' };
 
@@ -73,34 +73,34 @@ class Card_Form extends React.Component {
           </a>
         </div>
 
-        <div
-        // style={{ width: '100%', boxShadow: '1px 1px 10px #d3d3d3', borderRadius:'8px' }}
-        >
+        <div>
           <div>
             {this.state.Flashcard.map((Cards, idx) => (
-              <div className="Cards" style={{ display: 'flex', justifyContent: 'space-evenly', padding: '30px', margin: '0 10px', boxShadow: '1px 1px 10px #d3d3d3', borderRadius: '8px' }}>
+              <div className="Cards" style={{ display: 'flex', justifyContent: 'space-evenly', padding: '20px 10px 0px 30px', margin: '20px 10px', boxShadow: '1px 1px 10px #d3d3d3', borderRadius: '8px' }}>
+                <div style={{margin:'30px 0 0 0'}}>
+                  <input
+                    type="text"
+                    placeholder={`Term #${idx + 1}`}
+                    value={Cards.name}
+                    onChange={this.handleCardsNameChange(idx)}
+                    style={{ marginRight: '20px', minWidth: '250px', }}
+                  />
 
-                <input
-                  type="text"
-                  placeholder={`Term #${idx + 1}`}
-                  value={Cards.name}
-                  onChange={this.handleCardsNameChange(idx)}
-                  style={{ marginRight: '20px', minWidth: '250px', }}
-                />
+                  <input
+                    type="text"
+                    placeholder={`Definition #${idx + 1}`}
+                    value={Cards.name}
+                    onChange={this.handleCardsNameChange(idx)}
+                    style={{ minWidth: '300px' }}
+                  />
+                  
+                  <div style={{ margin: '30px 0 0 0'}}>
+                  <p>{idx + 1}</p>
+                  </div>
+                </div>
 
-                <input
-                  type="text"
-                  placeholder={`Definition #${idx + 1}`}
-                  value={Cards.name}
-                  onChange={this.handleCardsNameChange(idx)}
-                  style={{ minWidth: '300px' }}
-                />
-
-                {/* <div>
-                  <p>#</p>
-                </div> */}
                 <div>
-                  <div style={{ textAlign: 'center', marginBottom: '10px', paddingRight:'10px' }}>
+                  <div style={{ textAlign: 'center', margin: '10px 0 12px 0', paddingRight:'8px' }}>
                     <img src="../../public/images/placeholder.png" style={{ width: '55px' }}></img>
                   </div>
 
