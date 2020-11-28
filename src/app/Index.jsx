@@ -8,9 +8,9 @@ import { Home } from '@/home';
 import { Profile } from '@/profile';
 import { Admin } from '@/admin';
 import { Account } from '@/account';
-import { Sets } from '@/sets'
-import { Study_Plan } from '@/study_plan';
-import { Metrics } from '@/metrics'
+import { Sets } from '../sets'
+import { Study_Plan } from '../study_plan';
+import { Metrics } from '../metrics'
 
 import { Add_Sets } from '../add_sets';
 
