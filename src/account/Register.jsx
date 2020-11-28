@@ -21,9 +21,9 @@ function Register({ history }) {
     }
     
     const initialValues = {
-        title: 'ms',
+        // title: 'Ms.',
         firstName: '',
-        lastName: 'null',
+        // lastName: 'null',
         email: '',
         password: '',
         confirmPassword: '',
