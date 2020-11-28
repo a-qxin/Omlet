@@ -93,7 +93,18 @@ input {
   border-radius: 25px;
   border: 3px solid @brand-color;
 }
-#yellowBorderButton {
+.wide-yellow-button {
+  background-color: @brand-color !important;
+  border: none;
+  padding: 8px 40px;
+  border-radius: 25px;
+  border: 3px solid @brand-color;
+}
+.wide-yellow-button:disabled {
+  background-color: rgb(170, 170, 170) !important;
+  border:none;
+}
+.yellow-border-button, #yellowBorderButton {
   border: 3px solid @brand-color;
   border-radius: 25px;
   padding: 8px 25px;
