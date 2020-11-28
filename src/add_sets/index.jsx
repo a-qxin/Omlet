@@ -22,7 +22,6 @@ function Add_Sets() {
   const setsTop = {
     display: 'flex',
     minWidth: '700px',
-    justifyContent: 'space-between'
   };
 
   const levelLink = {
@@ -38,7 +37,7 @@ function Add_Sets() {
           <input placeholder="Set Name" type="text" style={{ width: '300px', padding: '0 10px 16px 2px' }} />
         </div>
 
-        <div style={{ width: '300px', margin: '0 0px 10px 10px' }} >
+        <div style={{ width: '250px', margin: '0 0 10px 210px' }} >
           <Select
             options={tests}
             className="mb-3"
