@@ -22,6 +22,14 @@ function Metrics() {
     marginTop: '30px',
     marginRight: '36px',
   };
+
+  const centerStats = {
+    textAlign:'center',
+  };
+  const statsSpace = {
+    padding: '20px'
+  };
+  
   // const setTabs = {
   //   display: 'flex',
   //   margin: '30px 0px 30px 200px',
@@ -63,7 +71,7 @@ function Metrics() {
             <Select
               options={tests}
               // className="mb-3"
-              placeholder="Select test"
+              placeholder="Subject"
               isSearchable
               style={{ width: '250px', }}
             />
@@ -92,11 +100,11 @@ function Metrics() {
         </div>
 
         {/* right metrics card */}
-        <div style={{ margin: '0 0 0 200px', boxShadow:'2px 2px 5px grey', minWidth: '400px', borderRadius: '20px', padding:'40px 30px' }}>
+        <div style={{ margin: '0 0 0 200px', boxShadow:'2px 2px 5px grey', minWidth: '550px', borderRadius: '20px', padding:'40px 30px' }}>
           <div style={{}}>
-            <div style={{ display: 'flex', justifyContent:'space-evenly' }}>
-              <div><h5 style={{marginRight:'30px', fontWeight:'800'}}>Cell Types</h5></div>
-              <div><button id="yellowButton">Plan</button></div>
+            <div style={{ display: 'flex', justifyContent:'space-evenly', verticalAlign:'bottom', alignItems: 'center' }}>
+              <div><h4 style={{margin:'0 30px 0 0', fontWeight:'800'}}>Cell Types</h4></div>
+              <div><button id="yellowButton" style={{paddingRight:'40px', paddingLeft:'40px'}}>Plan</button></div>
 
               {/* <button 
                                 id="yellowButton" 
@@ -107,18 +115,39 @@ function Metrics() {
                                 {isSubmitting && <span className="spinner-border spinner-border-sm mr-1" />}
                                 Login
                             </button> */}
-              <div><a>Study Set</a></div>
+              <div><button id="yellowBorderButton">Study Set</button></div>
             </div>
 
             {/* metrics wheel */}
-            <div>
-
+            <div style={{display:'flex', justifyContent:'center', marginTop:'30px'}}>
+              <div>
+                <pie className="twentyfive"></pie>
+              </div>
             </div>
 
             {/* xp, score, time info */}
-            <div>
-
+            <div style={{display:'flex',justifyContent:'space-evenly'}}>
+              <div style={centerStats}>
+                <div style={statsSpace}><h5>EXP</h5></div>
+                <div> 460 | 1200 </div>             
+              </div>
+              <div style={centerStats}>
+                <div style={statsSpace}><h5>AVG Score</h5></div>
+                <div>0%</div>
+              </div>
+              <div style={centerStats}>
+                <div style={statsSpace}><h5>Time Left</h5></div>
+                <div>6 Hours</div>
+              </div>
             </div>
+
+            <div style={{display:'flex', justifyContent:'center', paddingTop:'60px'}}>
+              <div style={{padding:'0 20px 0 0'}}>See Terms Rate</div>
+              <div>
+                <img src='src/images/down.svg' style={{width:'20px'}} ></img>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
