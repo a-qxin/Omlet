@@ -22,6 +22,29 @@ module.exports = {
                 use: [ 
                    { loader: 'css-loader' },
                 ]
+            },
+            {
+                test: /\.(jpe?g|gif|png|svg)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(gif|png|jpe?g)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/images/',
+                        },
+                    },
+                ],
             }
         ]
     },
@@ -41,7 +64,8 @@ module.exports = {
     externals: {
         // global app config object
         config: JSON.stringify({
-            apiUrl: '/api'
+            // apiUrl: '/api'
+            apiUrl: 'http://localhost:4000'
         })
     }
 }
