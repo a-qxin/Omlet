@@ -9,8 +9,8 @@ import { App } from './app';
 import './styles.less';
 
 // fake backend. comment out below two lines if using real backend
-// import { configureFakeBackend } from './_helpers';
-// configureFakeBackend();
+import { configureFakeBackend } from './_helpers';
+configureFakeBackend();
 
 // attempt silent token refresh before startup
 accountService.refreshToken().finally(startApp);

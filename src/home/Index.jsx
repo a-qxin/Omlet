@@ -26,7 +26,11 @@ function Home() {
   return (
     <div>
       <div style={homeContainer}>
-        <h2>Welcome back <b>{user.firstName}</b></h2>
+        <div style={{display:'flex', alignItems:'flex-end'}}>
+          <h4 style={{margin:'0 14px 10px 0', color: '#717171', letterSpacing:'2px'}}>Welcome Back </h4> 
+          <h1><b>{user.firstName}</b></h1>
+        </div>
+        
         <hr style={border} />
 
         <div style={{ display: 'flex'}}>

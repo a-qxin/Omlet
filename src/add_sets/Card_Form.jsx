@@ -56,6 +56,12 @@ class Card_Form extends React.Component {
     });
   };
 
+  // handleCreateTier = () => {
+  //   this.setState({
+  //     Flashcard: this.state.Flashcard.concat( { Flashcard: [{ name: "" }]})
+  //   });
+  // }
+
   render() {
     const iconContainer = { boxShadow: '2px 2px 5px #BEBEBE', padding: '8px', borderRadius: '100%', margin: '0 20px 20px 20px' };
     const icon = { height: '36px', margin: '5px' };
@@ -119,7 +125,9 @@ class Card_Form extends React.Component {
 
                     <div style={{textAlign:'center'}}>
                       <Button variant="link" >
-                        <img src="../../public/images/newbranch-icon.svg" style={smallIcon} />
+                        <img src="../../public/images/newbranch-icon.svg" style={smallIcon} 
+                        // onClick={this.handleCreateTier} 
+                        />
                       </Button>
                     </div>
 

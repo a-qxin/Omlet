@@ -6,12 +6,12 @@ import { Row, Col } from 'react-bootstrap';
 import { accountService } from '@/_services';
 
 const logo = {
-  margin: '30px 0 70px 5px'
+  margin: '30px 5px 70px 5px'
 };
 const circle = {
   margin: '0 auto',
-  height: '60px',
-  width: '60px',
+  height: '50px',
+  width: '50px',
   borderRadius:'100%',
   background:'white',
   boxShadow: '0px 0px 5px rgba(0,0,0,0.6)',
@@ -24,9 +24,9 @@ const navlinks = {
   fontSize:'13px',
 };
 const navIcons = {
-  width: '42px', 
+  width: '35px', 
   height:'auto',
-  margin:'15px 9px',
+  margin:'13px auto',
 };
 const navText = {
   margin: '12px 0 2px 0',
@@ -44,12 +44,12 @@ function Nav() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand vertical-nav" >
+      <nav className="navbar navbar-expand vertical-nav" style={{margin:'0', padding:'0 8px', }} >
         <Row style={{ height: "100%", textAlign:'center' }}>
           <Col>
 
             <NavLink exact to="/" className="nav-item nav-link" style={logo}>
-              <img src='public/images/omlet-logo.png' style={{ width: "80px" }} />
+              <img src='public/images/omlet-logo.png' style={{ width: "70px" }} />
             </NavLink>
 
             <NavLink exact to="/" className="nav-item nav-link" style={navlinks}>
@@ -68,7 +68,7 @@ function Nav() {
 
             <NavLink exact to="/study_plan" className="nav-item nav-link" style={navlinks}>
               <div style={circle}>
-                <img src='public/images/plan_icon.svg' style={{width: '30px', margin:'12px 10px',}} ></img>
+                <img src='public/images/plan_icon.svg' style={{width: '28px', margin:'9px auto',}} ></img>
               </div>
               <p style={navText}>Study Plan</p>
             </NavLink>
@@ -80,8 +80,11 @@ function Nav() {
               <p style={navText}>Metrics</p>
             </NavLink>
 
-            <div style={{height: '30px'}}>
-              <a onClick={accountService.logout} className="nav-item nav-link" style={{position:'absolute', bottom:'0', margin:'30px 0 0 20px', fontSize: '14px'}} >Logout</a>
+            <div style={{position:'absolute', bottom:'0', textAlign:'center'}}>
+              <a onClick={accountService.logout} className="nav-item nav-link" style={{margin:'16px 0 20px 17px', fontSize: '14px'}} >
+                <img src='src/images/logout.png' style={{width:'17px', marginBottom:'20px'}}/>
+                <p>Log Out</p>
+              </a>
             </div>
 
           </Col>
