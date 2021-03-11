@@ -2,7 +2,6 @@ import React from 'react';
 import { accountService } from '@/_services';
 import {Set} from './Set.jsx'
 // import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-// TODO: convert set to separate component
 
 function Sets() {
   const user = accountService.userValue;
@@ -39,11 +38,11 @@ function Sets() {
 
         {/* user's sets to map */}
         <Set/>
-        {/* <Set/>
         <Set/>
         <Set/>
         <Set/>
-        <Set/> */}
+        <Set/>
+        <Set/>
 
       </div>
 
