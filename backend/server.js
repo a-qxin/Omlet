@@ -18,18 +18,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 
-// const uri = process.env.ATLAS_URI;
-// mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true });
-// const connection = mongoose.connection;
-// connection.once('open', () => {
-//     console.log("MongoDB database connection established successfully");
-// })
-
 // allow cors requests from any origin and with credentials
 app.use(cors({ origin: (origin, callback) => callback(null, true), credentials: true }));
 
 // api routes
 app.use('/accounts', require('./accounts/accounts.controller'));
+
+const cardRouter = require('./cards/card.controller');
+const setRouter = require('./cards/set.controller');
+app.use('/cards', cardRouter);
+app.use('/sets', setRouter);
 
 // swagger docs route
 app.use('/api-docs', require('_helpers/swagger'));
@@ -42,3 +40,5 @@ const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 
 app.listen(port, () => {
     console.log('Server listening on port ' + port);
 });
+
+// module.exports = router;

@@ -3,14 +3,15 @@ const Schema = mongoose.Schema;
 
 const setSchema = new Schema({
 
-  name: { type: String, unique: true, maxlength: 400 },
-  test: { type: String, unique: true },
+  // username: { type: String, required: true },
+  name: { type: String, unique: true, maxlength: 400, required: true },
+  // test: { type: String, unique: true },
   // color: chosen from presets. map using number?
-  numTerms: { type: Number },
-  created: { type: Date, default: Date.now },
-  updated: Date,
+  // numTerms: { type: Number },
+  // created: { type: Date, default: Date.now },
+  // updated: Date,
 
-  // way to store cards?? 
+  // way to store cards?? (reference card in card.model.js)
 
   // user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 
@@ -21,7 +22,7 @@ const setSchema = new Schema({
  */
 
 setSchema.path('name').required(true, 'Set name cannot be blank');
-setSchema.path('test').required(true, 'Set test cannot be empty');
+// setSchema.path('test').required(true, 'Set test cannot be empty');
 
 /**
  * Methods
@@ -46,12 +47,12 @@ setSchema.path('test').required(true, 'Set test cannot be empty');
 //     }
 // });
 
-schema.virtual('isExpired').get(function () {
-  return Date.now() >= this.expires;
-});
+// schema.virtual('isExpired').get(function () {
+//   return Date.now() >= this.expires;
+// });
 
-schema.virtual('isActive').get(function () {
-  return !this.revoked && !this.isExpired;
-});
+// schema.virtual('isActive').get(function () {
+//   return !this.revoked && !this.isExpired;
+// });
 
-module.exports = mongoose.model('Set', schema);
+module.exports = mongoose.model('Set', setSchema);

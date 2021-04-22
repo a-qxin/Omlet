@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const cardSchema = new Schema({
 
     // connect to be part of set??
-
+    // username: { type: String, required: true },
+    set: {type: String, required: true},
     term: { type: String, unique: true, required: true },
     definition: { type: String, unique: true, required: true },
     // num sub cards - numCards: { type: Number },
@@ -31,4 +32,4 @@ const cardSchema = new Schema({
 //     }
 // });
 
-module.exports = mongoose.model('Card', schema);
+module.exports = mongoose.model('Card', cardSchema);
