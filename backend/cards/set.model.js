@@ -24,35 +24,4 @@ const setSchema = new Schema({
 setSchema.path('name').required(true, 'Set name cannot be blank');
 // setSchema.path('test').required(true, 'Set test cannot be empty');
 
-/**
- * Methods
- */
-
-// setSchema.methods = {
-//   // save set
-  // community features would go here
-// };
-
-// schema.virtual('isVerified').get(function () {
-//     return !!(this.verified || this.passwordReset);
-// });
-
-// schema.set('toJSON', {
-//     virtuals: true,
-//     versionKey: false,
-//     transform: function (doc, ret) {
-//         // remove these props when object is serialized
-//         delete ret._id;
-//         delete ret.passwordHash;
-//     }
-// });
-
-// schema.virtual('isExpired').get(function () {
-//   return Date.now() >= this.expires;
-// });
-
-// schema.virtual('isActive').get(function () {
-//   return !this.revoked && !this.isExpired;
-// });
-
 module.exports = mongoose.model('Set', setSchema);
