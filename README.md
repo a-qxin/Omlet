@@ -66,13 +66,14 @@ npm start
 To run the backend (port 4000) alongside the frontend, also use:
 
 ```
-//first comment out lines 12 & 13 in /src/index.jsx
-
+# Run the backend server
 cd backend
-
 npm i
-
 npm start
+
+# Then, on a new terminal, navigate to the root directory of the repo
+# and run the frontend with the following:
+npm run start:fake
 ```
 
 ## Acknowledgements
