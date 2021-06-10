@@ -8,6 +8,7 @@
     "license": "MIT",
     "scripts": {
         "build": "webpack --mode production",
+        "start:fake": "webpack-dev-server --open --watch --watch-poll --define process.env.FAKE_BACKEND=true",
         "start": "webpack-dev-server --open --watch --watch-poll"
     },
     "dependencies": {
