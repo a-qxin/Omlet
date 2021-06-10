@@ -2,15 +2,16 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import { render } from 'react-dom';
 
-import { history } from './_helpers';
+import { configureFakeBackend, history } from './_helpers';
 import { accountService } from './_services';
 import { App } from './app';
 
 import './styles.less';
 
-// fake backend. comment out below two lines if using real backend
-import { configureFakeBackend } from './_helpers';
-configureFakeBackend();
+// start fake backend if running with "npm run start:fake"
+if (process.env.FAKE_BACKEND === true) {
+  configureFakeBackend();
+}
 
 // attempt silent token refresh before startup
 accountService.refreshToken().finally(startApp);
