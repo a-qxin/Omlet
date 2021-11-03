@@ -6,24 +6,81 @@ import {Set} from './Set.jsx'
 function Sets() {
   const user = accountService.userValue;
 
-  const setContainer = {
+  
+
+  const dropdownsContainer = {
     margin: '60px 0 0 276px',
-    width: '972px',
+    padding: '0 12px',
+    display: 'flex',
+    flexWrap: 'wrap'
+  };
+
+  const dropdownContainer = {
+    position: 'relative',
+    display:'block',
+    width:'15em',
+    height: '2em',
+    lineHeight: '3',
+    overflow:'hidden',
+    borderRadius: '.25em',
+    paddingBottom: '10px',
+  };
+
+  const dropdown = {
+    appearance: 'none',
+    outline: 0,
+    // background: 'green',
+    backgroundImage: 'none',
+    width: '100%',
+    height: '100%',
+    color: 'black',
+    cursor: 'pointer',
+    // border:'1px solid black',
+    // borderRadius: '3px'
+  };
+
+  const setContainer = {
+    // background: '#eaeaea',
+    margin: '60px 0 0 276px',
+    width: '80%',
     height: '100%',
     display: 'flex',
     flexWrap: 'wrap'
   };
 
   const dottedBorder = {
-    width: '300px',
+    width: '419px',
+    // width: '27%',
     height: '200px',    
     borderRadius: '20px',
-    margin: '12px',
+    margin: '15px',
     border: '1.5px dashed #000000',
   };
 
   return (
     <div>
+
+      {/* dropdowns */}
+      <div style={dropdownsContainer}>
+        <div style={dropdownContainer}>
+          <select style={dropdown} name="sort-by" id="subject">
+            <option value="volvo" >Subject</option>
+            <option value="saab">Recent</option>
+            <option value="mercedes">Lowest EXP</option>
+          </select> 
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <div style={dropdownContainer}>
+          <select style={dropdown} name="classes" id="cars">
+            <option value="volvo">All Classes</option>
+            <option value="saab">BIO</option>
+            <option value="mercedes">ARTH</option>
+            <option value="audi">HIST</option>
+            <option value="audi">FNRT</option>
+          </select> 
+        </div>
+      </div>
+
       {/* new set */}
       <div style={setContainer}>
         

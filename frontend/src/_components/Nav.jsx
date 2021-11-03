@@ -30,6 +30,7 @@ const navIcons = {
 };
 const navText = {
   margin: '12px 0 2px 0',
+  color: 'white'
 };
 
 function Nav() {
@@ -44,7 +45,7 @@ function Nav() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand vertical-nav" style={{margin:'0', padding:'0 8px', }} >
+      <nav className="navbar navbar-expand vertical-nav" style={{margin:'0', padding:'0 8px', background: '#2e2e2e'}} >
         <Row style={{ height: "100%", textAlign:'center' }}>
           <Col>
 
@@ -83,7 +84,7 @@ function Nav() {
             <div style={{position:'absolute', bottom:'0', textAlign:'center'}}>
               <a onClick={accountService.logout} className="nav-item nav-link" style={{margin:'16px 0 20px 17px', fontSize: '14px'}} >
                 <img src='src/images/logout.png' style={{width:'17px', marginBottom:'20px'}}/>
-                <p>Log Out</p>
+                <p style={navText}>Log Out</p>
               </a>
             </div>
 
@@ -91,7 +92,7 @@ function Nav() {
         </Row>
       </nav>
 
-      <div style={{ margin: '0 0 30px 158px', padding: '0 0 20px 0', display:'flex', boxShadow: '0 5px 3px -4px #c4c4c4' }}>
+      <div style={{ margin: '0 0 30px 158px', padding: '0 0 20px 0', display:'flex' }}>
         <div style={{width:'100%', padding:'40px 0 0 140px'}}>
           <Searchbar />
         </div>

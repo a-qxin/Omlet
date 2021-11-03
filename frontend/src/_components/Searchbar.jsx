@@ -14,8 +14,17 @@ function Searchbar() {
     width: '100%'
   };
   const input = {
+    // padding:'0 0 10px 40px', 
+    // height: '100%'
     padding:'0 0 10px 40px', 
-    height: '100%'
+    width: "100%",
+    height: '100%',
+    outline: 'none',
+    borderTopStyle: 'hidden',
+    borderLeftStyle: 'hidden',
+    borderRightStyle: 'hidden',
+    borderBottomStyle: 'groove',
+    fontSize:'16px'
   };
 
   useEffect(() => {
