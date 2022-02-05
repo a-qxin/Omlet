@@ -24,6 +24,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Design Process](#design-process) 
   * [Built With](#built-with)
 * [Getting Started](#getting-started)<!-- * [Contact](#contact) -->
 * [Acknowledgements](#acknowledgements)
@@ -35,6 +36,10 @@
 Our team of four (2 designers, 2 devs) came together via [BuildConnect](https://www.buildconnect.io) to design a web app that allows students to study more efficiently with a clean user experience + to have the option to organize flashcards in a hierarchical format.
 
 This is an ongoing project.
+
+### Design Process
+
+See our team's process doc [here](https://drive.google.com/file/d/1_jRbWV8AJ_UtZRfgH_odVu6bytlavOL0/view).
 
 ### Built With
 
