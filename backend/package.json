@@ -21,7 +21,7 @@
         "joi": "^17.1.1",
         "jsonwebtoken": "^8.5.1",
         "mongodb": "^3.5.7",
-        "mongoose": "^5.9.25",
+        "mongoose": "^5.13.15",
         "nodemailer": "^6.6.1",
         "rootpath": "^0.1.2",
         "swagger-ui-express": "^4.1.4",
